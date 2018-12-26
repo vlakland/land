@@ -133,8 +133,9 @@
               따라서 MSM과 같은 관절과 연골 건강에 도움이 되는 건강기능식품은 젊을 때부터 섭취하는 것이 좋고,
               적어도 콜라겐 생성이 급격히 감소하는 50대 이전부터 복용하는 것이 유리하다.
             </p>
-            <p>
-              
+            <p><img src="img/adimg4.jpg" alt="" class="img-fluid"></p>
+            <p> 
+              일양MSM100은 2019년 새해를 맞아 더 많은 고객들에게 MSM의 효과를 알리고자 무료체험행사를 진행하고 있다. 지난해만 무료체험신청을 통해 
             </p>
             <p><a href="tel:01099473474">무료 상담전화 걸기</a></p>
           </div>
@@ -346,6 +347,86 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
+  
+  <!-- Form Function Javascript-->
+  <script>
+      var wform_code=628;
+      
+      
+      function wformsend(grp){
+          
+          wformreset();
+          if(grp==null){
+              grp = "Y";
+          }
+          var msgname="";
+          var data = [];
+          $("[wform="+grp+"]").each(function (){
+              try{
+                  var mname = $(this).attr("wname");
+                  
+                  var val =$(this).val();
+      
+                  if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                      val = $("[name="+$(this).attr("name")+"]:checked").val();
+      
+                  }
+      
+                  wformadd(mname,val);
+      
+                  var c = $(this).attr("c");
+      
+                  if(c==null) return;
+      
+                  var csplit=c.split(/:/gi);
+      
+      
+                  if(csplit[0]=="STR"){
+                      if(!val){
+                          msgname+=mname+"을 입력하세요.\n";
+                      }
+                  }else if(csplit[0]=="NUM"){
+                      if(!val || isNaN(val)){
+                          msgname+=mname+"에 숫자만 입력하세요.\n";
+                      }
+                  }else if(csplit[0]=="NOTNULL"){
+                      if(!val){
+                          msgname+=mname+"을 입력하세요.\n";
+                      }
+                  }else{
+      
+                  }
+              }catch(e){ alert(e)}		
+      
+          });
+      
+          if(msgname=="") {
+              form.submit();	
+              return true;
+          }
+          alert(msgname);
+          return false;
+      }
+      function wformadd(name,val){
+          var input = $("<input type='hidden' name='"+name+"'/>");
+          if($("[name="+name+"]").length>0){
+              input = $($("[name="+name+"]").get(0));	
+          }
+          $(input).val(input.val()+val+" ");
+          form.append(input);
+      }
+      
+      function wformreset(){
+          form.empty();
+          wformadd("referrer",document.referrer);
+          wformadd("code",wform_code);
+          wformadd("inven",$.getP('bnna18'));
+      }
+      
+      var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+      form.appendTo("body");
+      
+       
+   </script>
 </body>
 </html>
