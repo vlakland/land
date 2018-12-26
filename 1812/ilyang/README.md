@@ -1,2 +1,0 @@
-# EstateAgency
-Templete
