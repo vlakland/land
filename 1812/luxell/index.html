@@ -170,34 +170,32 @@ body { background-color:#333; }
 	</div>
 	<div class="formBox frm1">
 		<form method="POST" accept-charset="utf-8" autocomplete="off">
-		<input type="hidden" name="campaign" value="fgG2rlnxboKh">
-		<input type="hidden" name="acode" value="KCHmn3JaeL">
-		<input type="hidden" name="scode" value="udCleeIepg">
-		<input type="hidden" name="mobile">
+		INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+		<INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
 		<div class="form-body">
 			<table>
 				<tbody>
 					<tr>
 						<th>이름</th>
-						<td><input type="text" name="name" class="form-control" autocomplete="off" placeholder="이름을 입력해주세요" required></td>
+						<td><input wform="Y" wname="NAME" c="STR" type="text" name="name" class="form-control" autocomplete="off" placeholder="이름을 입력해주세요" required></td>
 					</tr>
 					<tr>
 						<th>나이</th>
-						<td><input type="number" name="age" class="form-control" autocomplete="off" placeholder="나이를 입력해주세요"required></td>
+						<td><input wform="Y" wname="AGE" c="NUM" type="number" name="age" class="form-control" autocomplete="off" placeholder="나이를 입력해주세요"required></td>
 					</tr>
 					<tr>
 						<th>연락처</th>
 						<td>
 								<div class="input-group input-group-justified">
 									<div class="input-group">
-										<select name="mobile1" class="form-control">
+										<select wform="Y" wname="PHONE" c="NUM" name="mobile1" class="form-control">
 											<option value="010">010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option>										</select>
 									</div>
 									<div class="input-group">
-										<input type="number" name="mobile2" class="form-control" maxlength="4" autocomplete="off" required>
+										<input wform="Y" wname="PHONE" c="NUM" type="number" name="mobile2" class="form-control" maxlength="4" autocomplete="off" required>
 									</div>
 									<div class="input-group">
-										<input type="number" name="mobile3" class="form-control" maxlength="4" autocomplete="off" required>
+										<input wform="Y" wname="PHONE" c="NUM" type="number" name="mobile3" class="form-control" maxlength="4" autocomplete="off" required>
 									</div>
 								</div>
 						</td>
@@ -205,7 +203,7 @@ body { background-color:#333; }
 					<tr>
 						<th>문의내용</th>
 						<td>
-							<textarea name="content" rows="5" class="form-control" autocomplete="off" placeholder="문의내용을 입력해주세요"></textarea>			
+							<textarea wform="Y" wname="MEMO" c="STR" name="content" rows="5" class="form-control" autocomplete="off" placeholder="문의내용을 입력해주세요"></textarea>			
 						</td>
 					</tr>				
 				</tbody>
@@ -228,7 +226,7 @@ body { background-color:#333; }
 				</ol>
 			</div>
 			<div class="btn-submit">
-				<input type="image" src="img/button.png">
+				<a onclick="wformsend('Y');return false;"><input type="image" src="img/button.png"></a>
 			</div>
 		</div>
 		</form>
@@ -248,5 +246,83 @@ body { background-color:#fafafa; }
 </div>
 </section>
 </body>
-
+<script>
+	var wform_code=631;
+	
+	
+	function wformsend(grp){
+		
+		wformreset();
+		if(grp==null){
+			grp = "Y";
+		}
+		var msgname="";
+		var data = [];
+		$("[wform="+grp+"]").each(function (){
+			try{
+				var mname = $(this).attr("wname");
+				
+				var val =$(this).val();
+	
+				if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+					val = $("[name="+$(this).attr("name")+"]:checked").val();
+	
+				}
+	
+				wformadd(mname,val);
+	
+				var c = $(this).attr("c");
+	
+				if(c==null) return;
+	
+				var csplit=c.split(/:/gi);
+	
+	
+				if(csplit[0]=="STR"){
+					if(!val){
+						msgname+=mname+"을 입력하세요.\n";
+					}
+				}else if(csplit[0]=="NUM"){
+					if(!val || isNaN(val)){
+						msgname+=mname+"에 숫자만 입력하세요.\n";
+					}
+				}else if(csplit[0]=="NOTNULL"){
+					if(!val){
+						msgname+=mname+"을 입력하세요.\n";
+					}
+				}else{
+	
+				}
+			}catch(e){ alert(e)}		
+	
+		});
+	
+		if(msgname=="") {
+			form.submit();	
+			return true;
+		}
+		alert(msgname);
+		return false;
+	}
+	function wformadd(name,val){
+		var input = $("<input type='hidden' name='"+name+"'/>");
+		if($("[name="+name+"]").length>0){
+			input = $($("[name="+name+"]").get(0));	
+		}
+		$(input).val(input.val()+val+" ");
+		form.append(input);
+	}
+	
+	function wformreset(){
+		form.empty();
+		wformadd("referrer",document.referrer);
+		wformadd("code",wform_code);
+		wformadd("inven",$.getP('bnna18'));
+	}
+	
+	var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+	form.appendTo("body");
+	
+	 
+ </script>
 </html>
