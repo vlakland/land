@@ -175,31 +175,31 @@
                 <form class="form-a">
                     <div class="row">
                       <div class="col-md-3 mb-3">
-                        <div class="form-group">
+                        <div class="formvs">
                           <label for="inputName">이름</label>
                           <input type="text" wform="Y" wname="NAME" c="STR" class="form-control form-control-lg form-control-a" id="inputName" placeholder="이름" required>
                         </div>
                       </div>
                       <div class="col-md-3 mb-3">
-                        <div class="form-group">
+                        <div class="formvs">
                           <label for="inputName">나이</label>
                           <input type="number" wform="Y" wname="AGE" c="NUM" class="form-control form-control-lg form-control-a" id="inputEmail1" placeholder="나이" required>
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <div class="form-group">
+                        <div class="formvs">
                           <label for="inputName">연락처</label>
-                          <input type="tel" wform="Y" wname="PHONE" c="STR" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="전화번호">
+                          <input type="tel" wform="Y" wname="PHONE" c="STR" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="전화번호" requierd>
                         </div>
                       </div>
                       <div class="col-md-12 mb-3">
-                        <div class="form-group">
+                        <div class="formvs">
                           <label for="textMessage">상담내용</label>
                           <textarea wform="Y" wname="MEMO" c="STR" id="textMessage" class="form-control" placeholder="상담내용" name="message" cols="45" rows="4"></textarea>
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <button type="submit" onclick="wformsend('Y');return false;" class="btn btn-a">신청하기</button>
+                        <button type="" onclick="wformsend('Y');return false;" class="">신청하기</button>
                       </div>
                       <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
                       <INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
@@ -342,9 +342,7 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/scrollreveal/scrollreveal.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <!--
-  <script src="contactform/contactform.js"></script>
-  -->
+
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   
@@ -428,5 +426,7 @@
       
        
    </script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   <script src="//static.adand.co.kr/page.adand/js/common.js"></script>
 </body>
 </html>
