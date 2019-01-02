@@ -177,34 +177,33 @@
                     <div class="col-md-3 mb-3">
                       <div class="form-group">
                         <label for="inputName">이름</label>
-                        <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="이름"
-                          required>
+                        <input wform="Y" wname="NAME" c="STR" type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="이름" required>
                       </div>
                     </div>
                     <div class="col-md-3 mb-3">
                       <div class="form-group">
                         <label for="inputEmail1">나이</label>
-                        <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
-                          placeholder="나이" required>
+                        <input wform="Y" wname="AGE" c="NUM" type="email" class="form-control form-control-lg form-control-a" id="inputEmail1" placeholder="나이" required>
                       </div>
                     </div>
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
                         <label for="inputUrl">연락처</label>
-                        <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="전화번호">
+                        <input wform="Y" wname="PHONE" c="NUM" type="url" wform="Y" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="전화번호">
                       </div>
                     </div>
                     <div class="col-md-12 mb-3">
                       <div class="form-group">
                         <label for="textMessage">상담내용</label>
-                        <textarea id="textMessage" class="form-control" placeholder="상담내용" name="message" cols="45"
-                          rows="4"></textarea>
+                        <textarea wform="Y" wname="MEMO" c="STR" id="textMessage" class="form-control" placeholder="상담내용" name="message" cols="45" rows="4"></textarea>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <button type="submit" class="btn btn-a">신청하기</button>
                     </div>
                   </div>
+                  <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+                  <INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
                 </form>
             </div>
           <div style="padding-bottom:100px"></div> 
@@ -350,7 +349,7 @@
   
   <!-- Form Function Javascript-->
   <script>
-      var wform_code=628;
+      var wform_code=632;
       
       
       function wformsend(grp){
