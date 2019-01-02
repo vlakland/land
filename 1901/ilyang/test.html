@@ -168,43 +168,43 @@
           </div>
         </div>
         <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
-            <div class="form-comments">
+            <div class="formvs">
                 <div class="title-box-d">
                   <h3 class="title-d"> 무료체험신청</h3>
                 </div>
                 <form class="form-a">
-                  <div class="row">
-                    <div class="col-md-3 mb-3">
-                      <div class="form">
-                        <label for="inputName">이름</label>
-                        <input wform="Y" wname="NAME" c="STR" type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="이름" required>
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <div class="form-group">
+                          <label for="inputName">이름</label>
+                          <input type="text" wform="Y" wname="NAME" c="STR" class="form-control form-control-lg form-control-a" id="inputName" placeholder="이름" required>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                      <div class="form">
-                        <label for="inputEmail1">나이</label>
-                        <input wform="Y" wname="AGE" c="NUM" type="email" class="form-control form-control-lg form-control-a" id="inputEmail1" placeholder="나이" required>
+                      <div class="col-md-3 mb-3">
+                        <div class="form-group">
+                          <label for="inputName">나이</label>
+                          <input type="number" wform="Y" wname="AGE" c="NUM" class="form-control form-control-lg form-control-a" id="inputEmail1" placeholder="나이" required>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                      <div class="form">
-                        <label for="inputUrl">연락처</label>
-                        <input wform="Y" wname="PHONE" c="NUM" type="url" wform="Y" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="010-1234-5678" required>
+                      <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                          <label for="inputName">연락처</label>
+                          <input type="tel" wform="Y" wname="PHONE" c="STR" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="전화번호">
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                      <div class="form">
-                        <label for="textMessage">상담내용</label>
-                        <textarea wform="Y" wname="MEMO" c="STR" id="textMessage" class="form-control" placeholder="상담내용" name="message" cols="45" rows="4"></textarea>
+                      <div class="col-md-12 mb-3">
+                        <div class="form-group">
+                          <label for="textMessage">상담내용</label>
+                          <textarea wform="Y" wname="MEMO" c="STR" id="textMessage" class="form-control" placeholder="상담내용" name="message" cols="45" rows="4"></textarea>
+                        </div>
                       </div>
+                      <div class="col-md-12">
+                        <button type="submit" onclick="wformsend('Y');return false;" class="btn btn-a">신청하기</button>
+                      </div>
+                      <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+                      <INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
                     </div>
-                    <div class="col-md-12">
-                      <button type="submit" class="btn btn-a" onclick="wformsend('Y');return false;">신청하기</button>
-                    </div>
-                  </div>
-                  <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
-                  <INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
-                </form>
+                  </form>
             </div>
           <div style="padding-bottom:100px"></div> 
           <div class="title-box-d">
