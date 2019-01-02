@@ -189,7 +189,7 @@
                     <div class="col-md-6 mb-3">
                       <div class="form">
                         <label for="inputUrl">연락처</label>
-                        <input wform="Y" wname="PHONE" c="NUM" type="url" wform="Y" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="010-1234-5678">
+                        <input wform="Y" wname="PHONE" c="NUM" type="url" wform="Y" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="010-1234-5678" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-3">
@@ -199,7 +199,7 @@
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <button type="submit" class="btn btn-a">신청하기</button>
+                      <button type="submit" class="btn btn-a" onclick="wformsend('Y');return false;">신청하기</button>
                     </div>
                   </div>
                   <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
