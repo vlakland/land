@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>:: 로또스마트 ::</title>
+<link rel="stylesheet" href="css/style2.css" />
+<link rel="stylesheet" href="http://lottosmart.kr/jscss/swiper/css/swiper.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="//land.dp25.kr/land/js/common.js"></script>
+<script src="http://lottosmart.kr/jscss/swiper/js/swiper.min.js"></script>
+<style>
+
+ .swiper-container {
+        width: 100%;
+        height:839px;
+        margin-left: auto;
+        margin-right: auto;		
+		
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        //background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	
+</style>
+
+</head>
+<script type="text/javascript">
+$(document).ready(function(){
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true,
+		autoplay:2000,		
+		autoplayDisableOnInteraction:false,
+		effect:'coverflow'
+    });
+});
+</script>
+
+<body>
+<div id="wrap">
+<div id="db_form01">
+    	<div id="db_box01">
+        <input name="INVEN" value="미파악됨" type="hidden">
+	  <input type="hidden" value="web2" wform="Y" wname="PAGE" c="STR" />
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top" id="db_txt_box">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="db_txt">이름</td>
+                        <td><input type="text" maxlength="10" style="width:300px; height:25px;" wform="Y" wname="NAME" c="STR" /></td>
+                      </tr>
+                      <tr>
+                        <td class="db_txt">연락처</td>
+                        <td><input type="text" style="width:300px; height:25px;" maxlength="11" onkeydown="return showKeyCode(event)" placeholder="- 를 제외한 휴대폰 번호" wform="Y" wname="PHONE" c="NUM" /></td>
+                      </tr>
+                    </table>
+                </td>
+                <td width="230" align="right" valign="top"><a onClick="wformsend();return false;"><input type="image" src="img2/db_btn.gif" /></a></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="17"><input type="checkbox" checked="checked" /></td>
+                        <td style="color:#FFF; font-size:15px"><b>서비스 이용약관</b>및 <b>개인정보취급방침</b> 동의</td>
+                        <td width="17"><input type="checkbox" checked="checked" /></td>
+                        <td style="color:#FFF; font-size:15px"><b>로또1등 예상번호</b> 및 <b>이벤트문자 알림</b> 동의</td>
+                      </tr>
+                    </table>
+                </td>
+              </tr>
+            </table>
+      </div>
+  </div>
+  <div id="slide" style="padding-top:158px;height:auto;">
+	<div class="swiper-container">
+			<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="img2/slide01.png"></div>				
+									<div class="swiper-slide"><img src="img2/slide02.png"></div>				
+									<div class="swiper-slide"><img src="img2/slide03.png"></div>				
+									<div class="swiper-slide"><img src="img2/slide04.png"></div>	
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+	</div>
+
+  </div>
+  <div><img src="img2/body_img03.gif" /></div>
+  <div id="db_form02">
+  	<div id="db_box02">
+    <input name="INVEN" value="미파악됨" type="hidden">
+	  <input type="hidden" value="web2" wform="Y1" wname="PAGE" c="STR" />
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td id="db_txt_box02">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="db_txt" width="80">이름</td>
+                    <td><input type="text" maxlength="10" style="width:510px; height:25px;" wform="Y1" wname="NAME" c="STR" /></td>
+                  </tr>
+                  <tr>
+                    <td class="db_txt">연락처</td>
+                    <td><input type="text" style="width:510px; height:25px;" maxlength="11" onkeydown="return showKeyCode(event)" placeholder="- 를 제외한 휴대폰 번호" wform="Y1" wname="PHONE" c="NUM"  /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="17"><input type="checkbox" checked="checked" /></td>
+                            <td style="color:#FFF; font-size:15px"><b>서비스 이용약관</b>및 <b>개인정보취급방침</b> 동의</td>
+                            <td width="17"><input type="checkbox" checked="checked" /></td>
+                            <td style="color:#FFF; font-size:15px"><b>로또1등 예상번호</b> 및 <b>이벤트문자 알림</b> 동의</td>
+                          </tr>
+                        </table>
+                    </td>
+                  </tr>
+                </table>
+            </td>
+            <td width="234" align="right" valign="top"><a onClick="wformsend('Y1');return false;"><input type="image" src="img2/db_btn2.gif" /></a></td>
+          </tr>
+        </table>
+    </div>
+  </div>
+  <div><img src="img2/body_img05.gif" /></div>
+  <div><img src="img2/body_img06.png" /></div>
+  <div id="db_form03">
+  	<div id="db_box03">
+    <input name="INVEN" value="미파악됨" type="hidden">
+	  <input type="hidden" value="web2" wform="Y2" wname="PAGE" c="STR" />
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td id="db_txt_box03">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="db_txt2" width="80">이름</td>
+                    <td><input type="text" maxlength="10" style="width:565px; height:25px;" wform="Y2" wname="NAME" c="STR" /></td>
+                  </tr>
+                  <tr>
+                    <td class="db_txt2">연락처</td>
+                    <td><input type="text" style="width:565px; height:25px;" maxlength="11" onkeydown="return showKeyCode(event)" placeholder="- 를 제외한 휴대폰 번호" wform="Y2" wname="PHONE" c="NUM"  /></td>
+                  </tr>
+                </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="17"><input type="checkbox" checked="checked" /></td>
+                            <td style="color:#457; font-size:15px"><b>서비스 이용약관</b>및 <b>개인정보취급방침</b> 동의</td>
+                            <td width="17"><input type="checkbox" checked="checked" /></td>
+                            <td style="color:#457; font-size:15px"><b>로또1등 예상번호</b> 및 <b>이벤트문자 알림</b> 동의</td>
+                          </tr>
+                        </table>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </div>
+  <div><a onClick="wformsend('Y2');return false;"><input type="image" src="img2/db_btn3.gif" /></a></div>
+  <div><img src="img2/body_img08.png" /></div>
+  <div id="bottom">
+  	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>만 19세 이상 참여 가능합니다.</td>
+      </tr>
+      <tr>
+        <td>본 이벤트는 1인 1회만 참여 가능합니다.</td>
+      </tr>
+      <tr>
+        <td>이벤트 안내문구를 읽지 않아서 발생한 문제는 본사에서 책임지지 않습니다.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script>
+var wform_code=387;
+
+
+function wformsend(grp){
+	wformreset();
+	if(grp==null){
+		grp = "Y";
+	}
+	var msgname="";
+	var data = [];
+	$("[wform="+grp+"]").each(function (){
+		try{
+			var mname = $(this).attr("wname");
+			
+			var val =$(this).val();
+
+			if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+				val = $("[name="+$(this).attr("name")+"]:checked").val();
+
+			}
+
+			wformadd(mname,val);
+
+			var c = $(this).attr("c");
+
+			if(c==null) return;
+
+			var csplit=c.split(/:/gi);
+
+
+			if(csplit[0]=="STR"){
+				if(!val){
+					msgname+=mname+"을 입력하세요.\n";
+				}
+			}else if(csplit[0]=="NUM"){
+				if(!val || isNaN(val)){
+					msgname+=mname+"에 숫자만 입력하세요.\n";
+				}
+			}else if(csplit[0]=="NOTNULL"){
+				if(!val){
+					msgname+=mname+"을 입력하세요.\n";
+				}
+			}else{
+
+			}
+		}catch(e){ alert(e)}		
+
+	});
+
+	if(msgname=="") {
+		//스마트로또 파라미터		
+		document.writeF.phone_num.value = $("[name=PHONE]").val().trim();
+		document.writeF.name.value = $("[name=NAME]").val().trim();
+		
+		data = $("#addDB").serialize(); 
+		
+		$.ajax({
+		  type: "POST",
+		  url: "//bedani.dp25.kr/form/form/add.htm",
+		  data: data,
+ 	      complete: function(xhr, status, error){
+			//alert("완료되었습니다.");
+			document.charset = "euc-kr";
+			document.writeF.submit(); 
+			// 요청 후 캐릭터셋을 원래대로 복구한다.
+			if (document.charset) {
+				document.charset = "utf-8";
+			} 
+		 },
+		  dataType: "text"
+		}); 	
+		
+		return false; 
+	}
+	alert(msgname);
+	return false;
+}
+function wformadd(name,val){
+	var input = $("<input type='hidden' name='"+name+"'/>");
+	if($("[name="+name+"]").length>0){
+		input = $($("[name="+name+"]").get(0));	
+	}
+	$(input).val(input.val()+val+"");
+	form.append(input);
+}
+
+function wformreset(){
+	form.empty();
+	wformadd("referrer",document.referrer);
+
+	wformadd("code",wform_code);
+	wformadd("inven",$.getP('bnna18'));
+}
+
+var form = $("<form  method='post' action='//bedani.dp25.kr/form/form/add.htm' id='addDB'></form>") 
+form.appendTo("body");
+
+ </script>
+  <iframe src="" name="jjj"  style="display:none"></iframe>
+<form name="writeF" method="post" action="http://lottosmart.kr/new_mylotto/m_gaip3_partner.php" accept-charset="euc-kr">   
+<input type="hidden" name="partnerid" value="banana">
+<input type="hidden" name="phone_num" value=""/>
+<input type="hidden" name="name" value=""/>
+</form>
+</body>
+</html>

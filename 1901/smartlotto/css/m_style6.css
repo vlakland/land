@@ -1,0 +1,16 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body,h1,h2 { padding:0; margin:0;}
+img { border:none;}
+a { text-decoration:none; color:#000;}
+
+.head { font-family:"맑은 고딕"; font-size:14px;}
+.txt_roll { font-family:"맑은 고딕"; font-size:13px;}
+
+#con { padding:10px;}
+
+.db_wrap { padding:10px;}
+.db_wrap td { font-family:"맑은 고딕"; font-size:16px; color:#000; line-height:24px; padding:3px 0; font-weight:bold;}
+
+.db_name {padding:15px 20px; width:60px; font-weight:bold; font-size:16px}

@@ -1,0 +1,82 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+body,div,table,td,p,span,img,ul,li,h1,h2 { margin:0px; padding:0px; border:none; list-style:none; }
+img { border:none; padding:0; margin:0;}
+a { text-decoration:none; color:#000; }
+a:hover { text-decoration:underline; color:#F00; }
+
+.head_txt { font-family:"맑은 고딕"; font-size:12px; text-align:right; color:#666; padding:5px 0;}
+h1 { font-family:"맑은 고딕"; font-size:24px; line-height:28px; padding:10px 0; line-height:32px }
+h2 { font-family:"맑은 고딕"; font-size:16px; line-height:24px; padding:5px 0 15px 0; color:#000;}
+#date { padding:15px 0 5px 0; font-family:"맑은 고딕"; font-size:13px;}
+
+#main { padding:0 8px; border-left:1px solid #dedede; border-right:1px solid #dedede;}
+#title { border-top:1px solid #dedede; border-bottom:1px solid #dedede; padding:10px 0;}
+.body_txt { padding:10px 10px; text-align:justify; font-family:"맑은 고딕"; font-size:15px; line-height:24px; word-break:break-all;}
+.body_txt2 { padding:5px 5px; text-align:justify; font-family:"맑은 고딕"; font-size:12px; line-height:20px; word-break:break-all;}
+.body_box { border:1px solid #e6e5e5; padding:3px; background-color:#f2f2f2;}
+
+
+.r_tit { font-family:"돋움"; font-size:12px; font-weight:bold; }
+.r_box2 { border:1px solid #e7e6e6; width:251px; margin-top:7px; padding:10px 5px 0 5px; }
+.r_box2 td { background:url(../img/dot.png) no-repeat 0 5px; padding:0 0 8px 12px; font-family:"돋움"; font-size:12px; }
+.r_box3 { border:1px solid #e7e6e6; width:251px; margin-top:7px; padding:10px 5px 0 5px; }
+.r_box3 td { padding:0 0 8px 5px; font-family:"돋움"; font-size:12px; }
+.r_txt3 { font-family:"맑은 고딕";font-size:12px; background:url(../img/dot.png) no-repeat 5px 7px; padding-left:13px; line-height:20px;padding-bottom:3px; }
+
+#r_box02_wrap { width:190px; margin:7px 0 10px 35px; }
+.news-container { width:682px;  overflow: hidden; position: relative; }
+.news-container ul { position:absolute; left:0px; width:682px; font-family:"돋움"; font-size:12px; }
+.news-container ul li { width:682px; height:150px; line-height:27px;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/*db*/
+.db_box { background:#f5f5f5; padding:10px; border:3px solid #3a64a4; border-top:none;}
+.db_box td { font-family:"맑은 고딕"; font-size:15px; line-height:26px; padding:3px 0; font-weight:bold;}
+
+
+.re_bg { background:url(../img/re_1.jpg) no-repeat; height:31px; font-family:"맑은 고딕"; font-size:14px; padding-left:15px;}
+.re_txt { font-family:"맑은 고딕"; font-size:13px; padding:15px 10px;}
+.re_date {  font-family:"맑은 고딕"; font-size:13px; color:#666;}
+
+#footer { font-family:"맑은 고딕"; font-size:13px; color:#666; text-align:center; padding:10px 0 5px 0; border-top:2px solid #dedede;}
+
+.scroll { position:relative; width:426px; height:412px;   padding-right:5px; text-align:right;}
+
+.db_wrap { background:#540909; padding:10px;}
+.db_wrap td { font-family:"맑은 고딕"; font-size:16px; color:#FFF; line-height:24px; padding:3px 0; font-weight:bold;}
+
+
+.viewport {
+	margin: 0px auto; width: 100%; overflow: hidden; padding-top: 4%; padding-bottom: 4%; -webkit-transform: translateZ(0); position:relative;
+}
+
+.flipsnap {
+	width: 400%;
+}
+.flipsnap::after {
+	height: 0px; clear: both; display: block; content: "";
+}
+.item {
+	width: 600px; text-align: center; color: rgb(102, 102, 102); font-size: 50px; margin-left: 0%; float: left;
+}
+@media screen and (max-width:480px)
+{
+.mod-header h1 {
+	padding-bottom: 10px; font-size: 34px;
+}
+.mod-header nav ul {
+	font-size: 18px;
+}
+.main {
+	width: 500px;
+}
+.demo {
+	position: relative;
+}
+.github-ribbon {
+	display: none;
+}
+}
+
