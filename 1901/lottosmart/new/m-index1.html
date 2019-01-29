@@ -426,6 +426,26 @@ $(".news-container").vTicker({
          });
       
          if(msgname=="") {
+				/*추가부분*/
+		 
+	 			// 외부정보 전송
+				$.ajax({
+					type: 'POST',
+					url: "http://www.lottosmart.kr/new_mylotto/m_gaip3_partner.php",
+					dataType:"jsonp",
+					data: {
+							partnerid:'vlaksuga',
+							phone_num:val, // 체크 부탁 (핸드폰번호)
+					},success : function(data){
+							console.log("성공-" + data);
+					}
+					,error: function(xhr) {
+					  console.log('실패 - ', xhr);
+					  return;
+					}
+				});
+
+				/*추가종료*/
             form.submit();	
             return true;
          }
@@ -455,5 +475,6 @@ $(".news-container").vTicker({
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//static.adand.co.kr/page.adand/js/common.js"></script>
+    
    </body>
 </html>
