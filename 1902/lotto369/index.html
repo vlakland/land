@@ -2,27 +2,24 @@
 <html lang="ko">
 
 <head>
-<!-- metadata -->
-    <title>:: 로또369 ::</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>:: 로또369 ::</title>
     <base href="http://www.ad4989.or.kr/">
-<!-- CSS -->
+        
     <link rel="stylesheet" href="http://cdn1.innorame.com/pub/JBAqBP/c//css/common.css">
     <link rel="stylesheet" href="http://cdn1.innorame.com/pub/JBAqBP/c//css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="http://www.ad4989.or.kr/c/lotto369_5/style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<!-- library -->
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 
 <body class="t2">
 <header></header>
 <section id="landpage-wrapper">
-        <script src="http://www.ad4989.or.kr/assets/js/flipclock.js"></script>
+<script src="http://www.ad4989.or.kr/assets/js/flipclock.js"></script>
     <section id="landpage-wrapper">
         <div style="margin: 0px auto; width: 100%; max-width: 640px;">
             <div style="bottom: 0px; display: none; position: fixed; z-index: 999999;"><a href="javascript:fnMove()"><img width="100%" src="http://cdn1.innorame.com/pub/JBAqBP/a/lotto369_5/floating.png"></a></div>
@@ -43,8 +40,8 @@
                                 </tbody>
                             </table></td>
                     </tr>
-            <tr>
-                <td class="head" style="background: rgb(3, 72, 148); padding: 0px 5px; border: 1px solid rgb(49, 55, 69); border-image: none; color: #fff;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="head" style="background: rgb(3, 72, 148); padding: 0px 5px; border: 1px solid rgb(49, 55, 69); border-image: none; color: #fff;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
                             <tr>
                                 <td width="14%" align="center">뉴스홈</td>
@@ -67,7 +64,7 @@
                             </tr>
                         </tbody>
                     </table></td>
-            </tr>
+                    </tr>
             <tr>
                 <td id="con"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
@@ -183,13 +180,13 @@
                                                             <td><div style="width: 100%;">
                                                                     <div style="width: 20%; text-align: center; color: #000; display: inline-block;">이름</div>
                                                                     <div style="width: 70%; margin: 0px; display: inline-block;">
-                                                                    <input name="name_1" id="name_1" type="text" class="input inputform1" placeholder="이름을 입력해주세요" value="">
+                                                                    <input name="name_1" id="name_1" type="text" class="input inputform1" wform="Y" wname="NAME" c="STR" placeholder="이름을 입력해주세요" value="">
                                                                     </div>
                                                                 </div>
                                                                 <div style="width: 100%;">
                                                                     <div style="width: 20%;text-align: center; color: #000; display: inline-block;">전화번호</div>
                                                                     <div style="width: 70%; margin-top: 5px; display: inline-block;"><span>
-                                                                        <select name="tel1_1" id="tel1_1" class="input" data-tel="1" style="height: 40px; ">
+                                                                        <select wform="Y" wname="PHONE" c="NUM" name="tel1_1" id="tel1_1" class="input" data-tel="1" style="height: 40px; ">
                                                                             <option value="010">010</option>
                                                                             <option value="011">011</option>
                                                                             <option value="016">016</option>
@@ -216,8 +213,12 @@
                                                     </tbody>
                                                 </table>
                                                 <div style="margin-top: 10px;">
+                                                    <!-- 필수입력 -->
+							<INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+                                <INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
+                                <!-- 필수입력 -->
                                                     <center>
-                                                        <a href="javascript:" class="send_form" data-num="1"><img src="http://cdn1.innorame.com/pub/JBAqBP/a/lotto369_5/dbbtn.gif" style="width:90%"></a>
+                                                        <a onclick="wformsend('Y');return false;"><img src="http://cdn1.innorame.com/pub/JBAqBP/a/lotto369_5/dbbtn.gif" style="width:90%"></a>
                                                         <div style="width: 100%; text-align:  center; color: #000; line-height: 14px; padding-top: 0px; padding-bottom: 0px; font-size: 14px; margin-top: 5px; display: inline-block;">
                                                             미성년자는 복권을 구매하거나 당첨금을 수령 할 수 없으므로<br>
                                                             무료번호를 제공하지 않습니다.
@@ -245,7 +246,7 @@
                                 </tr>
                                 <tr>
                                     <td width="100%" height="30" style="color:#000; padding-bottom: 20px; padding-left: 10px; font-size: 13px; ">
-                                    <input type="checkbox" name="agree4_1" id="agree4_1" checked="checked" value="Y" style="margin-left: 10px;" class="chk_list3 input2">
+                                    <input type="checkbox" wform="Y" wname="INFO" c="STR" name="agree4_1" id="agree4_1" checked="checked" value="Y" style="margin-left: 10px;" class="chk_list3 input2">
                                         마케팅 정보 수신동의<strong style="color: #000;">(선택)</strong> <a style="color:#000; padding-right: 15px; font-size: 13px; float: right;" href="http://admin.edl.co.kr/lotto3/agreement.html" target="_blank">마케팅동의 자세히보기</a></td>
                                 </tr>
                                                     </tbody></table>
@@ -404,7 +405,85 @@
 </form>
     </section>
     <footer></footer>
-
+    <script>
+            var wform_code=635;
+            
+            
+            function wformsend(grp){
+                
+                wformreset();
+                if(grp==null){
+                    grp = "Y";
+                }
+                var msgname="";
+                var data = [];
+                $("[wform="+grp+"]").each(function (){
+                    try{
+                        var mname = $(this).attr("wname");
+                        
+                        var val =$(this).val();
+            
+                        if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                            val = $("[name="+$(this).attr("name")+"]:checked").val();
+            
+                        }
+            
+                        wformadd(mname,val);
+            
+                        var c = $(this).attr("c");
+            
+                        if(c==null) return;
+            
+                        var csplit=c.split(/:/gi);
+            
+            
+                        if(csplit[0]=="STR"){
+                            if(!val){
+                                msgname+=mname+"을 입력하세요.\n";
+                            }
+                        }else if(csplit[0]=="NUM"){
+                            if(!val || isNaN(val)){
+                                msgname+=mname+"에 숫자만 입력하세요.\n";
+                            }
+                        }else if(csplit[0]=="NOTNULL"){
+                            if(!val){
+                                msgname+=mname+"을 입력하세요.\n";
+                            }
+                        }else{
+            
+                        }
+                    }catch(e){ alert(e)}		
+            
+                });
+            
+                if(msgname=="") {
+                    form.submit();	
+                    return true;
+                }
+                alert(msgname);
+                return false;
+            }
+            function wformadd(name,val){
+                var input = $("<input type='hidden' name='"+name+"'/>");
+                if($("[name="+name+"]").length>0){
+                    input = $($("[name="+name+"]").get(0));	
+                }
+                $(input).val(input.val()+val+" ");
+                form.append(input);
+            }
+            
+            function wformreset(){
+                form.empty();
+                wformadd("referrer",document.referrer);
+                wformadd("code",wform_code);
+                wformadd("inven",$.getP('bnna18'));
+            }
+            
+            var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+            form.appendTo("body");
+            
+             
+         </script>
             <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -413,28 +492,10 @@
             <script src="http://cdn1.innorame.com/pub/JBAqBP/c//js/bootstrap/bootstrap.min.js"></script>
     
     
-            <script src="http://www.ad4989.or.kr/assets/js/com.js"></script>
-                        <script src="http://www.ad4989.or.kr/assets/js/db.js"></script>
-                
-
-            <script src="http://www.ad4989.or.kr/c/lotto369_5/js.js"></script>
+          
     <!-- <script src="http://www.ad4989.or.kr/c/lotto369_5/js.js?v=20190214170213"></script> -->
-    
-    <!-- <script src="http://www.ad4989.or.kr/assets/js/appicon.js" type='text/javascript'></script> -->
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-111465955-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-111465955-3');
-    </script>
-    <!-- AD-POP SCRIPT / DO NOT ALTER THIS SCRIPT. -->
-    <!-- COPYRIGHT (C) THE A MEDIA INC. ALL RIGHTS RESERVED. -->
-    <iframe src="http://script.theprimead.co.kr/winggoSetCookiePage.php?code=NDM4Mw%3D%3D&amp;_NMNCODE_=" height="0" width="0"></iframe>
-    <!-- END OF AD-POP SCRIPT -->
+   
+ 
 
 
 </body>
