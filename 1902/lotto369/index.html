@@ -6,14 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>:: 로또369 ::</title>
   <style>
-  .clock{
-	zoom: 0.7;
-	-moz-transform: scale(0.7);
-	margin:25px auto;
-	text-align:center;
-}
-
+  .clock{	zoom: 0.7;	-moz-transform: scale(0.7);	margin:25px auto;	text-align:center;}
   </style>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//static.adand.co.kr/page.adand/js/common.js"></script>
   <base href="https://p.adand.co.kr/1902/lotto369/">
 
   <link rel="stylesheet" href="lib/css/common.css">
@@ -168,6 +165,8 @@
                 <!----------DB필수입력 S---------->
                 <a id="db_table"></a>
                 <form name="form1" id="form1" autocomplete="off">
+                  	<INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+                    <INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
                   <table width="100%" id="form1" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                       <tr>
@@ -361,7 +360,7 @@
                                           style="width: 20%; text-align: center; color: #000; display: inline-block;">이름
                                         </div>
                                         <div style="width: 70%; margin: 0px; display: inline-block;">
-                                          <input name="name_1" id="name_1" type="text" class="input inputform1"
+                                          <input wform="Y" wname="NAME" c="STR" name="name_1" id="name_1" type="text" class="input inputform1"
                                             placeholder="이름을 입력해주세요" value="">
                                         </div>
                                       </div>
@@ -369,7 +368,7 @@
                                         <div style="width: 20%;text-align: center; color: #000; display: inline-block;">
                                           전화번호</div>
                                         <div style="width: 70%; margin-top: 5px; display: inline-block;"><span>
-                                            <select name="tel1_1" id="tel1_1" class="input" data-tel="1"
+                                            <select wform="Y" wname="PHONE" c="NUM" name="tel1_1" id="tel1_1" class="input" data-tel="1"
                                               style="height: 40px; ">
                                               <option value="010">010</option>
                                               <option value="011">011</option>
@@ -402,7 +401,7 @@
                               </table>
                               <div style="margin-top: 10px;">
                                 <center>
-                                  <a href="javascript:" class="send_form" data-num="1"><img
+                                  <a onclick="wformsend('Y');return false;"><img
                                       src="lib/img/dbbtn.gif"
                                       style="width:90%"></a>
                                   <div
@@ -447,11 +446,11 @@
                                     <tr>
                                       <td width="100%" height="30"
                                         style="color:#000; padding-bottom: 20px; padding-left: 10px; font-size: 13px; ">
-                                        <input type="checkbox" name="agree4_1" id="agree4_1" checked="checked" value="Y"
+                                        <input wform="Y" wname="INFO" type="checkbox" name="agree4_1" id="agree4_1" checked="checked" value="Y"
                                           style="margin-left: 10px;" class="chk_list3 input2">
                                         마케팅 정보 수신동의<strong style="color: #000;">(선택)</strong> <a
                                           style="color:#000; padding-right: 15px; font-size: 13px; float: right;"
-                                          href="http://admin.edl.co.kr/lotto3/agreement.html" target="_blank">마케팅동의
+                                          href="agree.html" target="_blank">마케팅동의
                                           자세히보기</a></td>
                                     </tr>
                                   </tbody>
@@ -624,19 +623,96 @@
     </form>
   </section>
   <footer></footer>
-
+  
   <!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+<!-- adand DB -->
+<script>
+        var wform_code=635;
+        
+        
+        function wformsend(grp){
+          
+          wformreset();
+          if(grp==null){
+            grp = "Y";
+          }
+          var msgname="";
+          var data = [];
+          $("[wform="+grp+"]").each(function (){
+            try{
+              var mname = $(this).attr("wname");
+              
+              var val =$(this).val();
+        
+              if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                val = $("[name="+$(this).attr("name")+"]:checked").val();
+        
+              }
+        
+              wformadd(mname,val);
+        
+              var c = $(this).attr("c");
+        
+              if(c==null) return;
+        
+              var csplit=c.split(/:/gi);
+        
+        
+              if(csplit[0]=="STR"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NUM"){
+                if(!val || isNaN(val)){
+                  msgname+=mname+"에 숫자만 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NOTNULL"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else{
+        
+              }
+            }catch(e){ alert(e)}		
+        
+          });
+        
+          if(msgname=="") {
+            form.submit();	
+            return true;
+          }
+          alert(msgname);
+          return false;
+        }
+        function wformadd(name,val){
+          var input = $("<input type='hidden' name='"+name+"'/>");
+          if($("[name="+name+"]").length>0){
+            input = $($("[name="+name+"]").get(0));	
+          }
+          $(input).val(input.val()+val+" ");
+          form.append(input);
+        }
+        
+        function wformreset(){
+          form.empty();
+          wformadd("referrer",document.referrer);
+          wformadd("code",wform_code);
+          wformadd("inven",$.getP('bnna18'));
+        }
+        
+        var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+        form.appendTo("body");
+        
+         
+       </script>
 
   <script src="lib/js/bootstrap.min.js"></script>
 
 
   <script src="lib/js/com.js"></script>
-  <script src="lib/js/db.js"></script>
-
-
   <script src="lib/js/js.js"></script>
   <!-- <script src="http://www.ad4989.or.kr/c/lotto369_5/js.js?v=20190214190252"></script> -->
 
@@ -651,12 +727,7 @@
 
     gtag('config', 'UA-111465955-3');
   </script>
-  <!-- AD-POP SCRIPT / DO NOT ALTER THIS SCRIPT. -->
-  <!-- COPYRIGHT (C) THE A MEDIA INC. ALL RIGHTS RESERVED. -->
-  <iframe src="http://script.theprimead.co.kr/winggoSetCookiePage.php?code=NDM4Mw%3D%3D&amp;_NMNCODE_=" height="0"
-    width="0"></iframe>
-  <!-- END OF AD-POP SCRIPT -->
-
+  
 
 </body>
 
