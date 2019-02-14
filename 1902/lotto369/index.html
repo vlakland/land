@@ -4,13 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>:: 로또369 ::</title>
+  <title>: 로또369 ::</title>
   <style>
   .clock{	zoom: 0.7;	-moz-transform: scale(0.7);	margin:25px auto;	text-align:center;}
   </style>
   
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="//static.adand.co.kr/page.adand/js/common.js"></script>
   <base href="https://p.adand.co.kr/1902/lotto369/">
 
   <link rel="stylesheet" href="lib/css/common.css">
@@ -630,85 +628,86 @@
 		<![endif]-->
 <!-- adand DB -->
 <script>
-        var wform_code=635;
-        
-        
-        function wformsend(grp){
+    var wform_code=635;
+    
+    
+    function wformsend(grp){
+      
+      wformreset();
+      if(grp==null){
+        grp = "Y";
+      }
+      var msgname="";
+      var data = [];
+      $("[wform="+grp+"]").each(function (){
+        try{
+          var mname = $(this).attr("wname");
           
-          wformreset();
-          if(grp==null){
-            grp = "Y";
+          var val =$(this).val();
+    
+          if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+            val = $("[name="+$(this).attr("name")+"]:checked").val();
+    
           }
-          var msgname="";
-          var data = [];
-          $("[wform="+grp+"]").each(function (){
-            try{
-              var mname = $(this).attr("wname");
-              
-              var val =$(this).val();
-        
-              if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
-                val = $("[name="+$(this).attr("name")+"]:checked").val();
-        
-              }
-        
-              wformadd(mname,val);
-        
-              var c = $(this).attr("c");
-        
-              if(c==null) return;
-        
-              var csplit=c.split(/:/gi);
-        
-        
-              if(csplit[0]=="STR"){
-                if(!val){
-                  msgname+=mname+"을 입력하세요.\n";
-                }
-              }else if(csplit[0]=="NUM"){
-                if(!val || isNaN(val)){
-                  msgname+=mname+"에 숫자만 입력하세요.\n";
-                }
-              }else if(csplit[0]=="NOTNULL"){
-                if(!val){
-                  msgname+=mname+"을 입력하세요.\n";
-                }
-              }else{
-        
-              }
-            }catch(e){ alert(e)}		
-        
-          });
-        
-          if(msgname=="") {
-            form.submit();	
-            return true;
+    
+          wformadd(mname,val);
+    
+          var c = $(this).attr("c");
+    
+          if(c==null) return;
+    
+          var csplit=c.split(/:/gi);
+    
+    
+          if(csplit[0]=="STR"){
+            if(!val){
+              msgname+=mname+"을 입력하세요.\n";
+            }
+          }else if(csplit[0]=="NUM"){
+            if(!val || isNaN(val)){
+              msgname+=mname+"에 숫자만 입력하세요.\n";
+            }
+          }else if(csplit[0]=="NOTNULL"){
+            if(!val){
+              msgname+=mname+"을 입력하세요.\n";
+            }
+          }else{
+    
           }
-          alert(msgname);
-          return false;
-        }
-        function wformadd(name,val){
-          var input = $("<input type='hidden' name='"+name+"'/>");
-          if($("[name="+name+"]").length>0){
-            input = $($("[name="+name+"]").get(0));	
-          }
-          $(input).val(input.val()+val+" ");
-          form.append(input);
-        }
-        
-        function wformreset(){
-          form.empty();
-          wformadd("referrer",document.referrer);
-          wformadd("code",wform_code);
-          wformadd("inven",$.getP('bnna18'));
-        }
-        
-        var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
-        form.appendTo("body");
-        
-         
-       </script>
-
+        }catch(e){ alert(e)}		
+    
+      });
+    
+      if(msgname=="") {
+        form.submit();	
+        return true;
+      }
+      alert(msgname);
+      return false;
+    }
+    function wformadd(name,val){
+      var input = $("<input type='hidden' name='"+name+"'/>");
+      if($("[name="+name+"]").length>0){
+        input = $($("[name="+name+"]").get(0));	
+      }
+      $(input).val(input.val()+val+" ");
+      form.append(input);
+    }
+    
+    function wformreset(){
+      form.empty();
+      wformadd("referrer",document.referrer);
+      wformadd("code",wform_code);
+      wformadd("inven",$.getP('bnna18'));
+    }
+    
+    var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+    form.appendTo("body");
+    
+     
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//static.adand.co.kr/page.adand/js/common.js"></script>
   <script src="lib/js/bootstrap.min.js"></script>
 
 
