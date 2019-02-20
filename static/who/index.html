@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" marka="1" href="#">
+      <img marki="1" alt="Image1" width="600" height="400">
+    </a>
+    <div class="desc" marktx="1" marka="1" alt="Add a description of the image here"></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+</div>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+  adinjq110 = jQuery.noConflict(true);
+  var adinjq110prefix = 'mark';
+  function az1113na(ad) {
+    var item = ad.item;
+    adinjq110.each(item, function (idx, data) {
+      try {
+        var i = idx + 1;
+        adinjq110('[markt=' + i + ']').text(data.t);
+        adinjq110('[marktx=' + i + ']').html(data.t2);
+        adinjq110('[marka=' + i + ']').attr('href', data.a);
+        adinjq110('[marki=' + i + ']').attr('src', data.i.replace("http://", "//").replace("ads.adand","c.adand"));
+//                      adinjq110('[marka=' + i + ']').attr('onclick', "adandgo('" + data.a + "','https://page.adand.co.kr/1811/nvmn/index.html?bnna18=B1056')").removeAttr("href");
+      } catch (E) {
+      }
+    });
+  }                    
+</script>
+<script>
+az1113na({"item":[{"a" : "http://d.adand.co.kr/C/1056/85/9212/1262/WEB/511",  "t" : "신용 10등급도 가능한 정부대출 \"화제\"!",  "t2" : "",  "i" : ""},]});
+</script>
+<script src="https://d.adand.co.kr/az1113na"></script>
+</html>
