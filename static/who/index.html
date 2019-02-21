@@ -1,24 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
 <style>
+
+/* header */
+header {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+}
+
+.title {
+  padding: 6px;
+
+}
+
+h1 {
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* section */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+}
+
+div.title {
+  margin:auto;
+  border: none;
+  max-width: 1200px;
+}
+
+li.nav {
+  display: inline;
+  float: left;
+}
+
 div.gallery {
   border: 1px solid #ccc;
+  background-color: #333;
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  border: 1px solid #f00;
 }
 
 div.gallery img {
   width: 100%;
   height: auto;
+  border-bottom: 1px solid #ccc;
 }
 
 div.desc {
   padding: 15px;
   text-align: center;
+  font-size: 16px;
+  line-height: 20px;
 }
+
+div.textbox {
+  border: 1px solid #ccc;
+  background-color: gray;
+}
+
+/* link decoration */
+a {
+ text-decoration: none;
+}
+a:link {
+  color:white;
+}
+a:visited {}
+a:hover{}
+a:active{}
+
 
 * {
   box-sizing: border-box;
@@ -28,17 +118,27 @@ div.desc {
   padding: 0 6px;
   float: left;
   width: 24.99999%;
+  margin: 6px 0;
+  background-color: white;
 }
 
+.box1 {
+  padding: 0 6px;
+  float: left;
+  width: 49.99999%;
+  margin: 6px 0;
+}
+
+/* responsive */
 @media only screen and (max-width: 700px) {
-  .responsive {
+  .responsive, .box1  {
     width: 49.99999%;
     margin: 6px 0;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .responsive {
+  .responsive, .box1 {
     width: 100%;
   }
 }
@@ -51,54 +151,138 @@ div.desc {
 </style>
 </head>
 <body>
-
-<h2>Responsive Image Gallery</h2>
-<h4>Resize the browser window to see the effect.</h4>
-
+<header>
+    <div class="title">
+        <h1>SNS FOCUS</h1>
+    </div>
+     
+      <ul>
+        <li><a class="active" href="#home">정치</a></li>
+        <li><a href="#">경제</a></li>
+        <li><a href="#">문화</a></li>
+        <li><a href="#">라이프</a></li>
+        <li><a href="#">연예</a></li>
+      </ul>
+</header>
+<section>
+   
 <div class="responsive">
   <div class="gallery">
     <a target="_blank" marka="1" href="#">
-      <img marki="1" alt="Image1" width="600" height="400">
+      <img marki="1" alt="Image2" width="600" height="400">
     </a>
-    <div class="desc" marktx="1" marka="1" alt="Add a description of the image here"></div>
+    <div class="desc" alt="description"><a target="_blank" marktx="1" marka="1"></a></div>
   </div>
 </div>
 
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
+    <div class="gallery">
+      <a target="_blank" marka="2" href="#">
+        <img marki="2" alt="Image2" width="600" height="400">
+      </a>
+      <div class="desc" alt="description"><a target="_blank" marktx="2" marka="2"></a></div>
+    </div>
+</div>
+
+ <div class="responsive">
+     <div class="gallery">
+       <a target="_blank" marka="3" href="#">
+         <img marki="3" alt="Image3" width="600" height="400">
+       </a>
+       <div class="desc" alt="description"><a target="_blank" marktx="3" marka="3"></a></div>
+     </div>
+  </div>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="4" href="#">
+        <img marki="4" alt="Image4" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="4" marka="4"></a></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="5" href="#">
+        <img marki="5" alt="Image5" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="5" marka="5"></a></div>
+  </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="6" href="#">
+        <img marki="6" alt="Image6" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="6" marka="6"></a></div>
+  </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="7" href="#">
+        <img marki="7" alt="Image7" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="7" marka="7"></a></div>
+  </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="8" href="#">
+        <img marki="8" alt="Image8" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="8" marka="8"></a></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="9" href="#">
+        <img marki="9" alt="Image9" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="9" marka="9"></a></div>
+  </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="10" href="#">
+        <img marki="10" alt="Image10" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="10" marka="10"></a></div>
+  </div>
+</div>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" marka="11" href="#">
+        <img marki="11" alt="Image11" width="600" height="400">
+      </a>
+    <div class="desc" alt="description"><a target="_blank" marktx="11" marka="11"></a></div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img_lights.jpg">
-      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    <a target="_blank" marka="12" href="#">
+      <img marki="12" alt="Image11" width="600" height="400">
     </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
+  <div class="desc" alt="description"><a target="_blank" marktx="11" marka="11"></a></div>
 </div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
 </div>
 
 <div class="clearfix"></div>
 
 <div style="padding:6px;">
-  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
-  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+  <p></p>
+  <p></p>
 </div>
 
+</section>
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
