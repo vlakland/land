@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, 
+initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>:: 로또머니 ::</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//land.dp25.kr/land/js/common.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: 0px auto; width: 100%; max-width: 640px;">
+        <a href="#db"><img src="m_img3/body_img01.png" width="100%" /></a>
+        <a href="#db"><img src="m_img3/body_img02.png" width="100%" /></a>
+        <a href="#db"><img src="m_img3/body_img03.png" width="90%" style="padding-top:15px;" /></a>
+        <a href="#db"><img src="m_img3/body_img04.png" width="100%" /></a>
+        <a href="#db"><img src="m_img3/body_img05.png" width="90%" style="padding-top:8px;" /></a>
+        <a href="#db"><img src="m_img3/body_img06.png" width="100%" /></a>
+        <a href="#db"><img src="m_img3/body_img07.png" width="90%" style="padding-top:8px;" /></a>
+        <a href="#db"><img src="m_img3/body_img08.png" width="100%" /></a>
+        <a href="#db"><img src="m_img3/re_img.png" width="100%" style="padding:15px 0;" /></a>
+
+        <div style="border: 3px solid rgb(43, 43, 43); width: 98.5%; margin-bottom:10px;">
+        <a id="db"></a>
+            <input name="INVEN" value="미파악됨" type="hidden">
+            <input type="hidden" value="mobile3" wform="Y" wname="PAGE" c="STR">
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td><img width="100%" src="m_img3/db_img03.jpg"></td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" style="padding-bottom: 10px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="59%" align="center" style="line-height: 30px; padding-top: 10px; padding-bottom: 10px; padding-left: 5px;"><span style="color: rgb(38, 38, 38); padding-right: 20px; font-size: 16px;"><strong>연락처</strong></span>
+
+                                                            <select style="width: 20%; height: 25px; border:1px solid #999" wform="Y" wname="PHONE" c="NUM"><option value="010">010</option>                         
+                                                        <option value="011">011</option>                         
+                                                        <option value="016">016</option>                         
+                                                        <option value="017">017</option>                         
+                                                        <option value="018">018</option>                         
+                                                        <option value="019">019</option>                         
+                                                      </select>
+                                                      <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />-
+                                                            <input type="tel" style="width: 20%; height: 23px; border:1px solid #999" maxlength="4" wform="Y" wname="PHONE" c="NUM" />
+                                                            <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />-
+                                                            <input style="width: 20%; height: 23px; border:1px solid #999" type="tel" maxlength="4" wform="Y" wname="PHONE" c="NUM" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="line-height: 20px; padding-top: 10px; padding-bottom: 5px; font-size: 12px; font-weight: bold;">*별도의 회원가입 없이 <span style="color: rgb(255, 0, 0);">서비스</span> 정보 제공
+                                                            <br>후 개인정보는 안전하게 폐기 됩니다.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="padding-top: 10px;"><a onclick="wformsend();return false;"><input type="image" src="m_img3/btn01.gif" width="60%"></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<iframe src="" name="submirObj1"  style="display:none"></iframe>
+<iframe src="" name="submirObj2"  style="display:none"></iframe>
+
+
+
+    <script>
+        var wform_code = 611;
+
+
+        function wformsend(grp) {
+            wformreset();
+            if (grp == null) {
+                grp = "Y";
+            }
+            var msgname = "";
+            var data = [];
+            $("[wform=" + grp + "]").each(function() {
+                try {
+                    var mname = $(this).attr("wname");
+
+                    var val = $(this).val();
+
+                    if ($(this).attr("type") == "radio" || $(this).attr("type") == "checkbox") {
+                        val = $("[name=" + $(this).attr("name") + "]:checked").val();
+
+                    }
+
+                    wformadd(mname, val);
+
+                    var c = $(this).attr("c");
+
+                    if (c == null) return;
+
+                    var csplit = c.split(/:/gi);
+
+
+                    if (csplit[0] == "STR") {
+                        if (!val) {
+                            msgname += mname + "을 입력하세요.\n";
+                        }
+                    } else if (csplit[0] == "NUM") {
+                        if (!val || isNaN(val)) {
+                            msgname += mname + "에 숫자만 입력하세요.\n";
+                        }
+                    } else if (csplit[0] == "NOTNULL") {
+                        if (!val) {
+                            msgname += mname + "을 입력하세요.\n";
+                        }
+                    } else {
+
+                    }
+                } catch (e) {
+                    alert(e)
+                }
+
+            });
+
+            if (msgname == "") {
+				var sPhone = $("[name=PHONE]").val().replace(/\s/g, '');
+				
+				var icompInput = $("<input type='hidden' name='hp' value='" + sPhone + "'/>");
+				var icompInput2 = $("<input type='hidden' name='partnerId' value='ban'/>");
+				var icompInput3 = $("<input type='hidden' name='mcpId' value='지오앤플랜'/>");
+				var icompInput4 = $("<input type='hidden' name='hp' value='" + sPhone + "'/>");
+				var icompInput5 = $("<input type='hidden' name='partnerId' value='ban'/>");
+				var icompInput6 = $("<input type='hidden' name='mcpId' value='지오앤플랜'/>");
+
+				obj1.append(icompInput);
+				obj1.append(icompInput2);
+				obj1.append(icompInput3);
+				obj2.append(icompInput4);
+				obj2.append(icompInput5);
+				obj2.append(icompInput6);
+
+				obj1.submit();
+				obj2.submit();
+				form.submit();	
+                return true;
+            }
+            alert(msgname);
+            return false;
+        }
+
+        function wformadd(name, val) {
+            var input = $("<input type='hidden' name='" + name + "'/>");
+            if ($("[name=" + name + "]").length > 0) {
+                input = $($("[name=" + name + "]").get(0));
+            }
+            $(input).val(input.val() + val + " ");
+            form.append(input);
+        }
+
+        function wformreset() {
+            form.empty();
+            wformadd("referrer", document.referrer);
+            wformadd("code", wform_code);
+            wformadd("inven", $.getP('bnna18'));
+        }
+
+		var obj1 = $("<form action='http://lottoman.kr/add_member.php' method='post' target='submirObj1'></form>");
+		obj1.appendTo("body");
+		var obj2 = $("<form action='http://lottomoney.net/add_member.php' method='post' target='submirObj2'></form>");
+		obj2.appendTo("body");
+        var form = $("<form  method='post' action='//bedani.dp25.kr/form/form/add.htm'></form>")
+        form.appendTo("body");
+    </script>
+
+</body>
+
+</html>
