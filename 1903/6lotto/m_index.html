@@ -347,7 +347,7 @@
         data = $("#addDB").serialize(); 
         
         $.ajax({
-          type: "POST",
+          method: "POST",
           url: "//crm.adand.co.kr/form/form/add.htm",
           data: data,
             complete: function(xhr, status, error){
@@ -386,8 +386,8 @@
   var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm' id='addDB'></form>") 
   form.appendTo("body");
   
-   </script>
-    <iframe src="" name="jjj"  style="display:none"></iframe>
+  </script>
+  <iframe src="" name="jjj"  style="display:none"></iframe>
   <form name="writeF" method="post" action="https://6lotto.co.kr/bbs/register_partner.php" accept-charset="euc-kr">   
   <input type="hidden" name="partnerid" value="vlaksuga">
   <input type="hidden" name="phone_num" value=""/>
