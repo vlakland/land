@@ -235,7 +235,7 @@ function SubmitConfirm1(form) {
 				</DIV>
 				<A id="db_table"></A> 
 				<!----------DB필수입력 S---------->
-				<form name="form1" autocomplete="off">
+				<FORM name="form1" autocomplete="off">
                         <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
 						<INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
 				    <TABLE width="100%" style="background: rgb(8, 16, 33); margin-top: 30px;" border="0" cellspacing="0" cellpadding="0">
@@ -348,9 +348,10 @@ src="img/img2_2.gif"></A></P>
 				</DIV>
 				
 				<!----------DB필수입력 S---------->
-				<form name="form1" onSubmit="return SubmitConfirm1(this)" autocomplete="off">
-					<TABLE width="100%" style="background: rgb(8, 16, 33); margin-top: 30px;" 
-border="0" cellspacing="0" cellpadding="0">
+				<FORM name="form1" autocomplete="off">
+                        <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+						<INPUT type="hidden" value="web" wform="Y" wname="PAGE" c="STR">
+				    <TABLE width="100%" style="background: rgb(8, 16, 33); margin-top: 30px;" border="0" cellspacing="0" cellpadding="0">
 						<TBODY>
 							<TR>
 								<TD class="body_txt"><A id="db_table"></A>
@@ -361,17 +362,13 @@ border="0" cellspacing="0" cellpadding="0">
 													<TR>
 														<TD><DIV style="width: 100%;">
 																<DIV style="width: 25%; text-align: center; color: rgb(255, 255, 255); display: inline-block;">이름</DIV>
-																<SPAN 
-            style="margin: 0px;">
-																<INPUT name="username" class="input input11" id="name_2" style="width: 160px;" type="text" placeholder="이름을 입력해주세요" value="">
+																<SPAN style="margin: 0px;">
+																<INPUT name="username" class="input input11" id="name_1" style="width: 160px;" type="text" placeholder="이름을 입력해주세요" value="" wform="Y" wname="NAME" c="STR" >
 																</SPAN> </DIV>
 															<DIV style="width: 100%;">
 																<DIV style="width: 25%; text-align: center; color: rgb(255, 255, 255); display: inline-block;">전화번호</DIV>
-																<DIV 
-            style="width: 70%; margin-top: 5px; display: inline-block;"><SPAN>
-																	<SELECT 
-            name="t1" class="input select11" id="tel1_2" 
-              data-tel="1">
+																<DIV style="width: 70%; margin-top: 5px; display: inline-block;"><SPAN>
+                                                                    <SELECT name="t1" class="input select11" id="tel1_1" wform="Y" wname="PHONE" c="NUM">
 																		<OPTION value="010">010</OPTION>
 																		<OPTION value="011">011</OPTION>
 																		<OPTION value="016">016</OPTION>
@@ -380,9 +377,9 @@ border="0" cellspacing="0" cellpadding="0">
 																		<OPTION value="019">019</OPTION>
 																	</SELECT>
 																	</SPAN> <SPAN>
-																	<INPUT name="tel2_2" class="input input11" id="t2" style="width: 48px;" type="tel" maxlength="4" data-tel="2">
+																	<INPUT name="t2" class="input input11" id="tel2_1" style="width: 48px;" type="tel" maxlength="4" wform="Y" wname="PHONE" c="NUM">
 																	</SPAN> <SPAN style="margin: 0px;">
-																	<INPUT name="tel3_2" class="input input11" id="t3" style="width: 48px;" type="tel" maxlength="4" data-tel="3">
+																	<INPUT name="t3" class="input input11" id="tel3_1" style="width: 48px;" type="tel" maxlength="4" wform="Y" wname="PHONE" c="NUM" >
 																	</SPAN> </DIV>
 															</DIV></TD>
 													</TR>
@@ -395,7 +392,7 @@ border="0" cellspacing="0" cellpadding="0">
 											</TABLE>
 											<DIV>
 												<CENTER>
-													<input type="image" src="img/btn3.gif" style="width:100%">
+													<input type="image" src="img/btn3.gif" style="width:100%" onclick="wformsend('Y');return false;">
 													<DIV class="db_txt2">미성년자는 복권을 구매하거나 당첨금을 수령 할 수 없으므로<BR>
 														무료번호를 제공하지 않습니다. </DIV>
 												</CENTER>
@@ -407,13 +404,13 @@ border="0" cellspacing="0" cellpadding="0">
 											<TBODY>
 												<TR>
 													<TD width="100%" height="30" style="color: rgb(230, 205, 211); padding-left: 10px; font-size: 12px; font-weight: bold; background-color: rgb(0, 0, 0);"><INPUT 
-            name="agreeAll" type="checkbox" checked="checked" 
-            value="전체동의">
+            name="agreeAll" class="chk3" type="checkbox" 
+            checked="checked" value="전체동의">
 														전체동의 </TD>
 												</TR>
 												<TR>
 													<TD width="100%" height="30" style="color: rgb(255, 255, 255); padding-left: 10px; font-size: 12px; background-color: rgb(0, 0, 0);"><INPUT 
-            name="agree1"  type="checkbox" checked="checked" 
+            name="agree1" type="checkbox" checked="checked" 
             value="이용약관">
 														이용약관<STRONG style="color: rgb(230, 205, 211);">(필수)</STRONG> <A style="color: rgb(255, 255, 255); padding-right: 15px; font-size: 12px; float: right;" 
             href="https://bravolotto.co.kr/mylotto//m_gaip1.php" 
@@ -428,9 +425,7 @@ border="0" cellspacing="0" cellpadding="0">
             target="_blank">개인정보취급방침 자세히보기</A></TD>
 												</TR>
 												<TR>
-													<TD width="100%" height="30" style="color: rgb(255, 255, 255); padding-left: 10px; font-size: 12px; background-color: rgb(0, 0, 0);"><INPUT 
-            name="agree3[]" class="input1" type="checkbox" 
-            checked="checked" value="동의함">
+													<TD width="100%" height="30" style="color: rgb(255, 255, 255); padding-left: 10px; font-size: 12px; background-color: rgb(0, 0, 0);"><INPUT name="agree3[]" class="input1" type="checkbox"  checked="checked" value="동의함" wform="Y" wname="LOG" c="STR" >
 														마케팅 정보 수신동의<STRONG style="color: rgb(230, 205, 211);">(선택)</STRONG> <A style="color: rgb(255, 255, 255); padding-right: 15px; font-size: 12px; float: right;" 
             href="https://bravolotto.co.kr/mylotto//m_gaip1.php" 
             target="_blank">마케팅동의
