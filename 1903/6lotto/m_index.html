@@ -125,62 +125,51 @@
                 </TR>
                 <!--form-->
 
-                <TR>
-                  
-                  <TD width="100%"><a name="db" id="db"></a>
-
-                    <DIV style="margin: 0px auto; border: 3px solid rgb(43, 43, 43); border-image: none; width: 90%;" id="db_table">
-                      <input name="INVEN" value="미파악됨" type="hidden">
-                      <input type="hidden" value="mobile2" wform="Y" wname="PAGE" c="STR" />
-
-                      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <TBODY>
-                          <TR>
-                            <TD><IMG width="100%" src="m_img2/db_img03.jpg"></TD>
-                          </TR>
-                          <TR>
-                            <TD align="center" valign="top" style="padding-bottom: 10px;">
-                              <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <TBODY>
-                                  <TR>
-                                    <TD
-                                      style="border-top-color: currentColor; border-top-width: medium; border-top-style: none;">
-                                      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
-                                        <TBODY>
-                                          <TR>
-                                            <TD width="59%" align="left" style="line-height: 30px; padding-top: 10px; padding-bottom: 10px; padding-left: 10px;">
-                                              <SPAN style="color: rgb(38, 38, 38); padding-right: 20px; font-size: 16px;"><STRONG>연락처</STRONG></SPAN>
-                                              <SELECT name="tel1" id="tel1" style="width: 20%; height: 25px;" wform="Y" wname="PHONE" c="NUM">
-                                                <OPTION value="010">010</OPTION>
-                                                <OPTION value="011">011</OPTION>
-                                                <OPTION value="016">016</OPTION>
-                                                <OPTION value="017">017</OPTION>
-                                                <OPTION value="018">018</OPTION>
-                                                <OPTION value="019">019</OPTION>
-                                              </SELECT>
-                                              <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />-
-                                              <INPUT name="tel2" id="tel2" style="width: 20%; height: 23px;" type="tel" maxlength="4" wform="Y" wname="PHONE" c="NUM">
-                                              <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />-
-                                              <INPUT name="tel3" id="tel3" style="width: 20%; height: 23px;" type="tel" maxlength="4" wform="Y" wname="PHONE" c="NUM">
-                                          </TD>
-                                          </TR>
-                                          <TR>
-                                            <TD align="center" style="padding-top: 10px;"><a onclick="wformsend('Y');return false;">
-                                            <input type="image" src="m_img2/btn01.gif" width="60%"></a></TD>
-                                          </TR>
-                                        </TBODY>
-                                      </TABLE>
-                                    </TD>
-                                  </TR>
-                                </TBODY>
-                              </TABLE>
-                            </TD>
-                          </TR>
-                        </TBODY>
-                      </TABLE>
-                    </DIV>
-                  </TD>
-                </TR>
+                <tr>
+                    <td align="center">
+                       <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+                       <input type="hidden" value="mobile" wform="Y" wname="PAGE" c="STR" />
+        
+                          <div id="db" style="overflow:hidden; background:url(m_img2/form_bg.gif) no-repeat; background-size:100%; width:100%; max-width:640px; margin:auto;">
+                                <div class="box1" style="margin:38% 10% 50% 10%;">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td><div style="width:100%">
+                                         <div style="display: inline-block;width: 25%;color: #fff;text-align: center;">전화번호</div>
+                                            <div style="width: 70%;display: inline-block;margin-top: 5px;">
+                                              <span>
+                                                <select  wform="Y" wname="PHONE" c="NUM" class="input selectform1">
+                                                  <option value="010" selected="selected">010</option>
+                                                  <option value="011">011</option>
+                                                  <option value="016">016</option>
+                                                  <option value="017">017</option>
+                                                  <option value="018">018</option>
+                                                  <option value="019">019</option>
+                                                </select>
+                                              </span>
+                                              <span><input type="tel" class="input inputform2" maxlength="4" wform="Y" wname="PHONE" c="NUM" ></span>
+                                              <span style="margin:0"><input type="tel" class="input inputform2" maxlength="4" wform="Y" wname="PHONE" c="NUM" ></span>
+                                            </div>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div style="color:#fff;font-size: 14px;text-align: center;padding-top:5px;padding-bottom: 10px;line-height: 14px;">
+                                          100% 무료이며, 서비스 외에 어떤 용도로도 사용하지 않습니다.
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    <div>
+                                        <center><a onclick="wformsend('Y');return false;"><img style="border: currentColor; border-image: none; width:100%; cursor:pointer;" src="m_img2/btn3.gif"></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                                                          
+                  </tr>
                 <!--form end-->
 
                 <TR>
