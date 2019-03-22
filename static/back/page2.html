@@ -63,27 +63,24 @@
         <script src="https://d.adand.co.kr/az1079na"></script>
         
  <!-- 후팝업 호출 -->
-    <script>
-        var prevpage = "http://c.adand.co.kr/adand/2018/12/19/25e94547ffce4a3d882fd3a85be83c4a.html"; //adand로 고칠것
-        
-           history.pushState({ url: "/e" }, "/prev", "25e94547ffce4a3d882fd3a85be83c4a.html");
-      //     history.pushState({ url: "/f" }, "/frefre", "25e94547ffce4a3d882fd3a85be83c4a.html");
+ <script>
+    var prevpage = "page3.html";
+    az1077na = az1078na
+       history.pushState(null, null, "#a"); 
+       adinjq110(window).on("popstate", function(e) {
+          var frfr = e.originalEvent.state;
   
-           adinjq110(window).on("popstate", function(e) {
-              var frfr = e.originalEvent.state;
-    
-    //광고물 스크립트만 교체
-              // az1077na = az1078na
-              //var s = document.createElement("script");
-              //s.type = "text/javascript";
-              //s.src = "https://d.adand.co.kr/az1077na";
-              //adinjq110("head").append(s);
-              
-              //or
-              window.location.href=prevpage;
+//광고물 스크립트만 교체
+          //var s = document.createElement("script");
+          //s.type = "text/javascript";
+          //s.src = "https://d.adand.co.kr/az1077na";
+          //adinjq110("head").append(s);
+          
+          //or
+          window.location.replace(prevpage);
 
-          });
-     
-  </script>
+      });
+ 
+</script>
     </body>
 </html>

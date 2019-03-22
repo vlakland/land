@@ -2,15 +2,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        <script>
-        if (window.opener.p != null) {
-            var adhref = window.opener.p;
-            history.pushState('1',adhref);
-            location.href = adhref;
-            window.opener.p = null;
-        }
-
-       </script>
         <title>현대인 필수정보</title>
         <style type="text/css">
             * { margin:0px; padding:0px; }
@@ -73,11 +64,9 @@
         
  <!-- 후팝업 호출 -->
     <script>
-        var prevpage = "http://c.adand.co.kr/adand/2018/12/19/cf7fae64f923480fb98ecabbe730a115.html";
+        var prevpage = "page2.html";
         az1077na = az1078na
-           history.pushState({ url: "/e" }, "/prev", "cf7fae64f923480fb98ecabbe730a115.html"); //히스토리페이지 url
-       //    history.pushState({ url: "/f" }, "/frefre", "869e9f75813a482f935232f032b30a4e.html"); //원래페이지 url
-  
+           history.pushState(null, null, "#a"); 
            adinjq110(window).on("popstate", function(e) {
               var frfr = e.originalEvent.state;
       
@@ -88,7 +77,7 @@
               //adinjq110("head").append(s);
               
               //or
-              window.location.href=prevpage;
+              window.location.replace(prevpage);
 
           });
      

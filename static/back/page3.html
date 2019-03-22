@@ -63,27 +63,24 @@
         <script src="https://d.adand.co.kr/az1080na"></script>
         
  <!-- 후팝업 호출 -->
-    <script>
-        var prevpage = "http://c.adand.co.kr/adand/2018/12/19/a9003744d53c40b199edb6f535c45e64.html";
-        
-           history.pushState({ url: "/e" }, "/prev", "a9003744d53c40b199edb6f535c45e64.html");
-      //     history.pushState({ url: "/f" }, "/frefre", "a9003744d53c40b199edb6f535c45e64.html");
+ <script>
+    var prevpage = "page4.html";
+    az1077na = az1078na
+       history.pushState(null, null, "#a"); 
+       adinjq110(window).on("popstate", function(e) {
+          var frfr = e.originalEvent.state;
   
-           adinjq110(window).on("popstate", function(e) {
-              var frfr = e.originalEvent.state;
-    
-    //광고물 스크립트만 교체
-                // az1077na = az1078na
-              //var s = document.createElement("script");
-              //s.type = "text/javascript";
-              //s.src = "https://d.adand.co.kr/az1077na";
-              //adinjq110("head").append(s);
-              
-              //or
-              window.location.href=prevpage;
+//광고물 스크립트만 교체
+          //var s = document.createElement("script");
+          //s.type = "text/javascript";
+          //s.src = "https://d.adand.co.kr/az1077na";
+          //adinjq110("head").append(s);
+          
+          //or
+          window.location.replace(prevpage);
 
-          });
-     
-  </script>
+      });
+ 
+</script>
     </body>
 </html>
