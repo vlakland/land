@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>현대인 필수정보</title>
+        <style type="text/css">
+            * { margin:0px; padding:0px; }
+            img { border:none; }
+            a { text-decoration:none; color:#000;width:290px; height:37px; line-height:37px; font-family:"맑은 고딕"; font-size:15px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+            #wrap { width:100% }
+            #wrap td { border-bottom:0px solid #dedede; }
+        </style>
+    </head>
+
+    <body>
+            <section id="wrap">
+                    <h2 style="text-align: center; padding-bottom: 10px; padding-top: 10px">현대인의 필수정보 TOP60</h2>
+                        <div style="border: 2px #dedede solid;padding-left:5px">
+                                <p><span>16. </span><a href="" target="_blank" marka="1" markt="1"></a></p>
+                                <p><span>17. </span><a href="" target="_blank" marka="2" markt="2"></a></p>
+                                <p><span>18. </span><a href="" target="_blank" marka="3" markt="3"></a></p>
+                                <p><span>19. </span><a href="" target="_blank" marka="4" markt="4"></a></p>
+                                <p><span>20. </span><a href="" target="_blank" marka="5" markt="5"></a></p>
+                                <p><span>21. </span><a href="" target="_blank" marka="6" markt="6"></a></p>
+                                <p><span>22. </span><a href="" target="_blank" marka="7" markt="7"></a></p>
+                                <p><span>23. </span><a href="" target="_blank" marka="8" markt="8"></a></p>
+                                <p><span>24. </span><a href="" target="_blank" marka="9" markt="9"></a></p>
+                                <p><span>25. </span><a href="" target="_blank" marka="10" markt="10"></a></p>
+                                <p><span>26. </span><a href="" target="_blank" marka="11" markt="11"></a></p>
+                                <p><span>27. </span><a href="" target="_blank" marka="12" markt="12"></a></p>
+                                <p><span>28. </span><a href="" target="_blank" marka="13" markt="13"></a></p>
+                                <p><span>29. </span><a href="" target="_blank" marka="14" markt="14"></a></p>
+                                <p><span>30. </span><a href="" target="_blank" marka="15" markt="15"></a></p>
+                                
+                        </div>      
+                </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            adinjq110 = jQuery.noConflict(true);
+            var adinjq110prefix = 'mark';
+            function az1079na(ad) {
+                var item = ad.item;
+                adinjq110.each(item, function (idx, data) {
+                    try {
+                        var i = idx + 1;
+                        adinjq110('[markt=' + i + ']').text(data.t);
+                        adinjq110('[marktx=' + i + ']').html(data.t2);
+                        adinjq110('[marka=' + i + ']').removeAttr('href').css("cursor", "pointer").off("click").on("click",function () {
+                            window.open(data.a.replace("http://", "//"));
+                            return false;
+                        });
+                        adinjq110('[marki=' + i + ']').attr('src', data.i.replace("http://", "//").replace("ads.adand","c.adand"));
+                    } catch (E) {
+                    }
+                });
+            }
+
+        </script>
+        <script>
+            az1079na({"item":[{"a" : "http://d.adand.co.kr/C/1062/85/9263/1266/MOBILE/1270",  "t" : "30代주부 \"여행하면서 돈벌어?\" 月수익 살펴보니! 헉",  "t2" : "",  "i" : ""},{"a" : "http://d.adand.co.kr/C/1062/85/9285/1269/MOBILE/1270",  "t" : "탈모?모발성장 신물질 개발.2주만에 꽉차!",  "t2" : "",  "i" : ""},{"a" : "http://d.adand.co.kr/C/1062/85/9270/1267/MOBILE/1270",  "t" : "문지르면서 지방녹여 \"저절로 살빠져!?\" 헉!",  "t2" : "",  "i" : ""},{"a" : "http://d.adand.co.kr/C/1062/85/9212/1262/MOBILE/1270",  "t" : "신용 10등급도 가능한 정부대출 \"화제\"!",  "t2" : "",  "i" : ""},{"a" : "http://d.adand.co.kr/C/1062/85/9277/1268/MOBILE/1270",  "t" : "현직의사 폭로! 관절염?병원보다 XX두알 효과",  "t2" : "",  "i" : ""},]});
+        </script>
+        <script src="https://d.adand.co.kr/az1079na"></script>
+        
+ <!-- 후팝업 호출 -->
+    <script>
+        var prevpage = "http://c.adand.co.kr/adand/2018/12/19/25e94547ffce4a3d882fd3a85be83c4a.html"; //adand로 고칠것
+        
+           history.pushState({ url: "/e" }, "/prev", "25e94547ffce4a3d882fd3a85be83c4a.html");
+      //     history.pushState({ url: "/f" }, "/frefre", "25e94547ffce4a3d882fd3a85be83c4a.html");
+  
+           adinjq110(window).on("popstate", function(e) {
+              var frfr = e.originalEvent.state;
+    
+    //광고물 스크립트만 교체
+              // az1077na = az1078na
+              //var s = document.createElement("script");
+              //s.type = "text/javascript";
+              //s.src = "https://d.adand.co.kr/az1077na";
+              //adinjq110("head").append(s);
+              
+              //or
+              window.location.href=prevpage;
+
+          });
+     
+  </script>
+    </body>
+</html>
