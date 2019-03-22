@@ -1,1 +1,22 @@
-<html>land test용</html>
+<html>land test용
+
+        <script>
+            function adandgo(adurl, backurl) {
+                try {
+                    window.open(adurl, "_blank");
+                } catch (e) {
+                }
+                try {
+                    top.location.href = backurl;
+                } catch (e) {
+                }
+                ;
+                return false;
+            }
+    
+        </script>
+    
+    <button onclick="adandgo('http://www.naver.com','https://vlaksuga.github.io/land/static/back/page1.html')">boot the back</button>
+    
+    
+</html>
