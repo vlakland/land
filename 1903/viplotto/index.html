@@ -3,10 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-<title>:: VIP로또 ::</title>
+<title>: VIP로또 :</title>
 <link rel="stylesheet" href="css/m_style7.css" />
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//static.adand.co.kr/page.adand/js/common.js"></script>
 <SCRIPT src="/land/js/jquery.vticker.js" type="text/javascript"></SCRIPT>
 <SCRIPT type="text/javascript">
 
@@ -402,139 +403,113 @@ $("#news-container1").vTicker({
 </div>
 
 
+<!--DB 작동 영역 시작-->
+<script>
+  var wform_code=639;
+  
+  
+  function wformsend(grp){
+     wformreset();
+     if(grp==null){
+        grp = "Y";
+     }
+     var msgname="";
+     var data = [];
+     $("[wform="+grp+"]").each(function (){
+        try{
+           var mname = $(this).attr("wname");
+           
+           var val =$(this).val();
+  
+           if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+              val = $("[name="+$(this).attr("name")+"]:checked").val();
+  
+           }
+  
+           wformadd(mname,val);
+  
+           var c = $(this).attr("c");
+  
+           if(c==null) return;
+  
+           var csplit=c.split(/:/gi);
+  
+  
+           if(csplit[0]=="STR"){
+              if(!val){
+                 msgname+=mname+"을 입력하세요.\n";
+              }
+           }else if(csplit[0]=="NUM"){
+              if(!val || isNaN(val)){
+                 msgname+=mname+"에 숫자만 입력하세요.\n";
+              }
+           }else if(csplit[0]=="NOTNULL"){
+              if(!val){
+                 msgname+=mname+"을 입력하세요.\n";
+              }
+           }else{
+  
+           }
+        }catch(e){ alert(e)}		
+  
+     });
+  
+     if(msgname=="") {
+        // 파라미터		
+        document.writeF.mb_hp.value = $("[name=PHONE]").val().trim();
+        //document.writeF.name.value = $("[name=NAME]").val().trim(); 
+        
+        data = $("#addDB").serialize(); 
+        
+        $.ajax({
+          method: "POST",
+          url: "//crm.adand.co.kr/form/form/add.htm",
+          data: data,
+            complete: function(xhr, status, error){
+           //alert("완료되었습니다.");
+           document.charset = "euc-kr";
+           document.writeF.submit(); 
+           // 요청 후 캐릭터셋을 원래대로 복구한다.
+           if (document.charset) {
+              document.charset = "utf-8";
+           } 
+         },
+          dataType: "text"
+        }); 	
+        
+        return false; 
+     }
+     alert(msgname);
+     return false;
+  }
+  function wformadd(name,val){
+     var input = $("<input type='hidden' name='"+name+"'/>");
+     if($("[name="+name+"]").length>0){
+        input = $($("[name="+name+"]").get(0));	
+     }
+     $(input).val(input.val()+val+"");
+     form.append(input);
+  }
+  
+  function wformreset(){
+     form.empty();
+     wformadd("referrer",document.referrer);
+     wformadd("code",wform_code);
+     wformadd("inven",$.getP('bnna18'));
+  }
+  
+  var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm' id='addDB'></form>") 
+  form.appendTo("body");
+  
+  </script>
+  <iframe src="" name="jjj"  style="display:none"></iframe>
+  <form name="writeF" method="post" action="http://www.lottovip.kr/bbs/register_partner.php" accept-charset="UTF-8">   
+  <input type="hidden" name="mb_partner" value="vlaksuga">
+  <input type="hidden" name="mb_hp" value=""/>
+  <input type="hidden" name="name" value=""/>
+  </form>
+<!--DB 작동 영역 끝-->
 
-  <script>
-var wform_code=317;
-
-var name = "";
-var tel1 = "";
-var tel2 = "";
-var tel3 = "";
-var uname = "";
-var data = "";
-var sharedata ={};
-
-
-function wformsend(grp){
-	wformreset();
-	if(grp==null){
-		grp = "Y";
-	}
-	var msgname="";
-	
-	$("[wform="+grp+"]").each(function (){
-		try{
-			var mname = $(this).attr("wname");
-			
-			var val =$(this).val();
-
-			if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
-				val = $("[name="+$(this).attr("name")+"]:checked").val();
-
-			}
-
-			wformadd(mname,val);
-
-			var c = $(this).attr("c");
-
-			if(c==null) return;
-
-			var csplit=c.split(/:/gi); 
-
-			
-			if(csplit[0]=="STR"){
-				if(!val){
-					msgname+=mname+"을 입력하세요.\n";
-				}
-			}else if(csplit[0]=="NUM"){
-				if(!val || isNaN(val)){
-					msgname+=mname+"에 숫자만 입력하세요.\n";
-				}
-			}else if(csplit[0]=="NOTNULL"){
-				if(!val){
-					msgname+=mname+"을 입력하세요.\n";
-				}
-			}else{
-
-			}
-		}catch(e){ alert(e)}		
-
-	});
-
-	if(msgname=="") {	
-		document.danawa.tel1.value = $("[name=tel1_Y]").val(); 
-		document.danawa.tel2.value = $("[name=tel2_Y]").val();  
-		document.danawa.tel3.value = $("[name=tel3_Y]").val();  
-		document.danawa.uname.value = $("[name=uname_Y]").val();  
-	
-		
-		//console.log($("#addDb").serialize());
-		data = $("#addDb").serialize(); 
-		
-		$.ajax({
-		  type: "POST",
-		  url: "//bedani.dp25.kr/form/form/add.htm",
-		  data: data,
- 	      complete: function(xhr, status, error){
-			//alert("등록되었습니다."); 
-			document.charset = "euc-kr";
-			document.danawa.submit(); 
-			// 요청 후 캐릭터셋을 원래대로 복구한다.
-			if (document.charset) {
-				document.charset = "utf-8";
-			} 
-			return true;
-		  },
-		  dataType: "text"
-
-		}); 
-	
-		return false;
-	}
-	alert(msgname);
-	return false;
-}
-function wformadd(name,val){
-	
-	var input = $("<input type='hidden' name='"+name+"'/>");
-	if($("[name="+name+"]").length>0){
-		input = $($("[name="+name+"]").get(0));	
-	}
-	$(input).val(input.val()+val+" ");
-	form.append(input);
-}
-
-function wformreset(){
-	form.empty();
-	wformadd("referrer",document.referrer);
-	wformadd("code",wform_code);
-	wformadd("inven",$.getP('bnna18'));
-}
-
-function chkBoxchk(rcvObj){
-	if (rcvObj.checked == false)
-	{
-		rcvObj.checked = true;
-		alert('동의하셔야 예상번호 확인이 가능합니다.');
-	}
-}
-
-var form = $("<form  method='post' action='//bedani.dp25.kr/form/form/add.htm' target='jjj' id='addDb'></form>") ;
-form.appendTo("body");
-
-function chkclick(rcvObj){
-	if (rcvObj.checked != true)
-	{
-		alert('동의하셔야 받아보실 수 있습니다.');
-		rcvObj.checked = true;
-	}
-}
- </script>
- <form method="post" name="danawa" action="http://www.lottodanawa.com/extb/landing/b_join_dp25.php " accept-charset="euc-kr">
- <input type="hidden" name="tel1" value=""/>
- <input type="hidden" name="tel2" value=""/>
- <input type="hidden" name="tel3" value=""/>
- <input type="hidden" name="uname" value=""/>
  </form>
 </body>
 </html>
