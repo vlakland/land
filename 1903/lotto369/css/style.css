@@ -1,0 +1,293 @@
+@charset "utf-8";
+/* CSS Document */
+/*@import url("./reset.css");*/
+/*@import url(//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);*/
+/*@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {margin: 0px;}
+/*top*/
+.top { display: block; }
+.top350 { display: none; }
+@media (max-width: 350px) {
+	.top { display: none; }
+	.top350 { display: block; }
+}
+/********** 모바일**********/
+.mauto {margin: 0 auto;}
+.block {display: block;}
+.iblock {display: inline-block;}
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.blue {color: #1e68ba;}
+.red {color: #ff0000;}
+.black {color: #000;}
+.underline {text-decoration: underline;}
+.nounderline {text-decoration: none;}
+.bold {font-weight: bold;}
+
+#wrap {font-family: 'Noto Sans KR','Helvetica Neue','Apple SD Gothic Neo',arial,'나눔바른고딕','Nanum Barun Gothic','나눔고딕','Nanum Gothic','돋움','malgun gothic',Dotum,Tahoma,Geneva,sans-serif;; width:100%; max-width:640px; overflow:hidden; margin:auto}
+
+.gnb { height:60px; width:100%; margin:auto; overflow:hidden; padding:0 15px; box-sizing:border-box;}
+.gnb_date { float:right; font-size:12px; margin-top:24px;}
+.gnb_weather { float:right; margin-top:24px; }
+.gnb_icon { float:right; width:60px; height:22px; background:url(/landing/shloan2017/img/icon.jpg) 0 0 no-repeat; background-size:60px; margin-top:20px; margin-left:0px;}
+.gnb_icon a {display:block; height:22px;}
+.content { width:100%; overflow:hidden;  box-sizing:border-box; margin-bottom:20px}
+.article_header {}
+.article_header h2 {font-size: 30px; line-height: 40px; color: #000000;margin: 15px 0 15px; display: block; width: 100%;}
+.navi {line-height: 1em;margin-top: 20px;color: #747474;font-size: 12px;}
+.summary {line-height: 1.5em;margin-bottom: 0px;}
+.summary .item {position: relative;padding-left: 15px;}
+.summary .item span:before {
+	content:"┖";
+	font-size: 12px;
+	font-weight: bold;
+	color: #b3b3b3;
+	position: absolute;
+    top: 2px;
+    left: 0px;
+}
+.article_info{height: 33px;}
+.fontsize {float: right;margin-top: 10px;}
+.date { font-size:12px; height:15px; color:#616161; float:left;margin-top: 15px;}
+
+.article_txt { overflow:hidden; padding:0 15px; border-top: 0px solid #ebebeb; padding-top: 0px;margin-top: 10px;color: #000000;}
+h4 { font-size:18px; line-height:30px; letter-spacing:-1px; margin-top:15px; color:#03C;}
+.article_txt p { font-size:17px; line-height:27px; letter-spacing:0px; margin-top:15px;}
+.article_txt img { display:block; margin:25px auto; width:100%; max-width: 640px;}
+.article_txt a { color: #000000; text-decoration: none;}
+.article_txt a:hover { text-decoration: underline;}
+.article_txt .img-txt { font-size: 15px; text-align: center; margin: 15px 0px 20px;}
+.navi {font-size: 12px; color: #747474;}
+
+
+.slot_t1 { margin-top:40px; overflow:hidden; border-top:1px solid #ddd; border-bottom:1px solid #ddd; padding:15px 0}
+.tit {font-size:17px; font-weight:bold; letter-spacing:-1px; margin-bottom:10px;}
+.slot_t1 ul { float:left; width:100%; }
+.slot_t1 li { padding-right:10px; text-indent:10px;}
+.slot_t1 li a { font-size:15px; line-height:28px; display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+
+/*footer*/
+.footer {
+	background-color: #d5d5d5;
+	border-top: 1px solid #b9b9b9;
+	padding: 20px 15px 20px;
+	color: #939393;
+	font-size: 13px;
+}
+.copyrights {
+	color: #939393;
+	font-family: 'Nanum Myeongjo','Noto Sans KR','Nanum Gothic','맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding: 10px 0px 0px;
+}
+
+/*contents*/
+.contents {
+	padding: 0 15px;
+}
+.contents img {
+	margin: 20px 0px;
+}
+.contents p {
+	font-size: 17px;
+	color: #000;
+	margin: 15px 0px;
+	line-height: 1.5em;
+}
+
+.comment .line {
+	color: #000;
+	padding: 10px 0px;
+	font-size: 17px;
+}
+.comment .line:nth-of-type(2) {
+	border-top: 0px;
+}
+.comment .line .green {
+	color: #0d966e;
+}
+.comment .line p {
+	margin: 10px 0px;
+	padding: 10px 15px;
+}
+.comment .title {
+	background-color: #f3f3f3;
+	padding: 10px 15px 10px;
+	font-size: 17px;
+}
+.number {
+	color: #000000;
+	font-size: 14px;
+	float: right;
+	padding: 0 15px 0px;
+}
+.number .red {
+	color: #ff0000;
+}
+.bottom-line {
+	margin-top: 60px;
+	background-color: #d5d5d5;
+	border-top: 1px solid #b9b9b9;
+	border-bottom: 1px solid #b9b9b9;
+	height: 12px;
+}
+.top-line {
+	padding: 0px 15px;
+}
+.gray {
+	color: #9da3ac;
+	padding-left: 20px;
+}
+.dbform {
+	overflow:hidden;text-align: center;
+	background:url(//cdn1.innorame.com/pub/JBAqBP/a/lottom01/db3.png) repeat-y; background-size:100%;
+	padding: 0px;
+	color: #fff;
+	display: block;
+	width: 100%;
+	max-width:640px;
+	margin: 0 auto;
+}
+.dbform2 {
+	width: 70%;
+	margin: 0 auto;
+}
+.dbform2 .label {font-weight: normal;margin-right: 10px;font-size: 26px;width: 25%;text-align: left;display: inline-block;}
+.dbform .input{
+	font-size: 20px;
+	border: 1px solid #eee;
+}
+.nameBox {padding-top: 40px}
+.name  {height: 46px;width: 70%;display: inline-block;}
+.name2  {height: 46px;width: 70%;display: inline-block;}
+.tel1  {height: 46px;width: 30%;}
+.tel2  {height: 40px;width: 29%;}
+.send_form {margin-top:40px;display: block;}
+.dbbtn {
+	max-width: 281px !important;
+	width: 100% !important;
+	margin: 0px auto !important;
+	padding-bottom: 29px;
+}
+.content .userCounter {
+	font-size:70px;line-height:70px;color:#000;	text-align: center;
+	padding: 20px 0px 0px;
+}
+.content .userCounter .userNum{font-weight:300;}
+.content .userCounter .userNum .counter01 {font-weight:900;letter-spacing:-1px;}
+.datebg {
+	display: inline-block;
+	width: 58px;
+	height: 95px;
+	background: url('//cdn1.innorame.com/pub/JBAqBP/a/lottom01/bg.png') no-repeat;
+	background-size: 100%;
+	color: #000;
+	padding-top: 8px;
+	text-align: center;
+}
+.dot {
+	vertical-align: top;
+	padding-top: 35px;
+	display: inline-block !important;
+	margin: 0px !important;
+	max-width: 10px !important;
+}
+
+
+@media screen and (max-width:640px) {
+	.content .userCounter {
+		font-size:40px;line-height:50px;
+		top: 10px;
+		left: 15%;
+	}
+	.datebg {
+		width: 33px;
+		height: 50px;
+	}
+	.dot {
+		vertical-align: top;
+		padding-top: 15px;
+		width: 7px;
+	}
+}
+@media screen and (max-width:520px) {
+	.dbform2 {
+		width: 90%;
+	}
+	.send_form {margin-top:20px;display: block;}
+}
+@media screen and (max-width:480px) {
+	.article_header h2 {font-size: 20px; line-height: 26px;}
+	.summary {font-size: 14px;}
+	.stit {color:#fff;font-size: 20px;vertical-align: top;}
+	.input_form {height: 30px;width: 100%;display: inline-block; padding: 3px 6px;}
+	.db_form_table input, .db_form_table select {
+		border: 0px; font-size: 12px; margin-top: 6px; padding: 3px 6px;
+	}
+	.article_txt p { font-size:16px;}
+	.link {font-size: 14px;}
+	.nameBox {padding-top: 30px}
+	.name  {height: 30px;width: 90%;}
+	.name2  {height: 30px;width: 90%;}
+	.tel1  {height: 34px;width: 30%;}
+	.tel2  {height: 30px;width: 29%;}
+	.dbbtn {width: 80% !important;}
+	.dbform2 .label {font-weight: normal;margin-right: 10px;font-size: 18px;width: 100%;text-align: center;display: inline-block;}
+	.send_form {margin-top:10px;display: block;}
+	.dot {
+		vertical-align: top;
+		padding-top: 15px;
+		display: inline-block !important;
+		margin: 0px !important;
+		max-width: 8px !important;
+	}
+}
+@media screen and (max-width:400px) {
+	.send_form {margin-top:20px;display: block;}
+	.label {width: 100%;}
+	.name  {height: 30px;width: 90%;}
+	.name2  {height: 30px;width: 90%;}
+	.tel1  {height: 34px;width: 30%;}
+	.tel2  {height: 30px;width: 27%;}
+	.content .userCounter {
+		font-size:35px;line-height:45px;
+		top: 7px;
+		left: 17%;
+	}
+	.datebg {
+		padding-top: 0px;
+		width: 28px;
+		height: 50px;
+	}
+	.dot {
+		vertical-align: top;
+		padding-top: 15px;
+		display: inline-block !important;
+		margin: 0px !important;
+		max-width: 5px !important;
+	}
+}
+@media screen and (max-width:350px) {
+	.content .userCounter {
+		font-size:35px;line-height:45px;
+		top: 3px;
+		left: 11%;
+	}
+	.datebg {
+		padding-top: 0px;
+		width: 28px;
+		height: 50px;
+	}
+	.dot {
+		vertical-align: top;
+		padding-top: 15px;
+		display: inline-block !important;
+		margin: 0px !important;
+		max-width: 5px !important;
+	}
+}
