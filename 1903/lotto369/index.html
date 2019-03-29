@@ -363,121 +363,11 @@
         }
     </style>
 
-
-    <script type="text/javascript" src="../../landing/ma/nkcell1/js/jquery.js"></script>
-    <script language="javascript" src="../../landing/ma/nkcell1/js/common.js"></script>
-
-    <!--DB폼 -->
-    <script type="text/JavaScript">
-function OnlyNumber(obj) {
-	for(var i=0; i<obj.value.length; i++) {
-		var chr=obj.value.substr(i,1);
-		if(chr<'0' || chr > '9') {
-			alert('숫자만 입력가능합니다.');
-			obj.focus();
-			obj.select();
-			return;
-		}
-	}
-}
-
-// 한글만 가능하게 체크하기
-function hancheck(val) {
-	for (i=0; i<val.length; i++)
-		{
-			var CodeNum = val.charCodeAt(i);
-			if (CodeNum < 128) {	return false;	}
-		}
-		return true;
-}
-
-
-// 자동 넘기기
-function NextTab(oMe, oNext, iLen)
- {
-   if (oMe.value.length == iLen) { oNext.focus(); }
- }
- 
-//onkeyup="NextTab(this, form1.다음인풋네임, this.maxLength)"   <---- 인풋에 넣기//
-
-
-
-function SubmitConfirm1(form) {
-
-	if(form.submitted) return false;
-	
-  	if (form.username.value == "")  {
-		alert("이름을 입력해주세요.");
-		form.username.focus();
-		return false;
-	}
-	
-	if (form.username.value.length < 2)	{
-		alert("이름은 2자 이상으로 쓰셔야 합니다.");
-		form.username.focus();
-		return false;
-	}
-	
-	if(hancheck(form.username.value) == false) {
-		alert("한글을 입력해주세요.");
-		form.username.focus();
-		form.username.value = '';
-		return false;
-	}
-
-
-	// 숫자 제대로 안남기면 안넘어가도록 할 경우
-	if (form.tel2.value == "" || form.tel2.value.length != 4){
-		alert("연락처를 입력해주세요.");
-		form.tel2.focus();
-		return false;
-	}
-	if (form.tel3.value == ""){
-		alert("연락처를 입력해주세요.");
-		form.tel3.focus();
-		return false;
-	}
-
-	form.action = '/ltm1/fnInst';
-    form.method = 'POST';
-    form.submitted = true;  
-	return true;	
-	
-}
-
-
-function SubmitConfirm2(form) {
-
-	if(form.submitted) return false;
-	
-
-	// 숫자 제대로 안남기면 안넘어가도록 할 경우
-	if (form.tel2.value == "" || form.tel2.value.length != 4){
-		alert("연락처를 입력해주세요.");
-		form.tel2.focus();
-		return false;
-	}
-	if (form.tel3.value == ""){
-		alert("연락처를 입력해주세요.");
-		form.tel3.focus();
-		return false;
-	}
-
-	form.action = '/ltm1/fnInst';
-    form.method = 'POST';
-    form.submitted = true;  
-	return true;	
-	
-}
-
-	</script>
-
 <body>
 
     <div id="wrap" class="container" style="width:100%;max-width:620px;margin:0 auto;">
         <div class="header">
-            <p><a href="#db_table"><img src="./img/top.jpg" width="100%"
-                        style="border-bottom:1px solid #ccc" /></a></p>
+            <p><a href="#db_table"><img src="./img/top.jpg" width="100%" style="border-bottom:1px solid #ccc" /></a></p>
 
         </div>
 
@@ -523,8 +413,7 @@ function SubmitConfirm2(form) {
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tbody style="line-height:24px;">
                                                         <tr>
-                                                            <td><img src="./img/title02.jpg"
-                                                                    width="100%"></td>
+                                                            <td><img src="./img/title02.jpg" width="100%"></td>
                                                         </tr>
 
                                                         <tr>
@@ -555,7 +444,8 @@ function SubmitConfirm2(form) {
                                                                                                         if (month < 10) month = '0' + month;
 
                                                                                                         document.write(today.getFullYear(), "-", month, "-", day);
-                                                                                                    </SCRIPT> 03:00</td>
+                                                                                                    </SCRIPT> 03:00
+                                                                                            </td>
                                                                                             <td width="40%" height="30"
                                                                                                 align="right"
                                                                                                 style="padding-right:10px;">
@@ -586,12 +476,13 @@ function SubmitConfirm2(form) {
                                 <p>해마다 자동보다 수동당첨자가 더 늘어나고 있다. 2019년도 마찬가지다. 흔히들 자동이 수동보다 당첨되기 더 쉬울거라 생각하지만 현실은 다르다. 이미
                                     전세계적으로 많은 전문가들과 연구원들에 의해 로또 번호 추첨에는 일정한 패턴이 있다는 것이 과학적으로 증명되었다. </p>
 
-                                <p>국내 로또 1등번호의 패턴을 심도 깊게 연구하고 개발된 프로그램인 로또369의 고액당첨 솔루션은 이미 로또매니아들 사이에서는 유명하다. 실제 로또369 솔루션으로부터 번호를 받은 고액당첨자들이 속출하고 있다.
+                                <p>국내 로또 1등번호의 패턴을 심도 깊게 연구하고 개발된 프로그램인 로또369의 고액당첨 솔루션은 이미 로또매니아들 사이에서는 유명하다. 실제 로또369
+                                    솔루션으로부터 번호를 받은 고액당첨자들이 속출하고 있다.
 
                                 </p>
 
-                                <p align="center" style="font-size:15px"><a href="#db"><img
-                                            src="./img/img_02.jpg" width="100%"></a><br />
+                                <p align="center" style="font-size:15px"><a href="#db"><img src="./img/img_02.jpg"
+                                            width="100%"></a><br />
                                     <span style="font-weight:bold">&lt;당첨 영수증 인증 사진&gt;</span>
                                 </p>
 
@@ -609,9 +500,8 @@ function SubmitConfirm2(form) {
                                     <div> <img src="./img/db_img05.jpg" width="100%">
                                     </div>
                                     <!-- 필수입력 -->
-                                    <form name="form1" onSubmit="return SubmitConfirm1(this)" autocomplete="off">
-                                        <input type="hidden" name="db_id" value="ltm1" />
-                                        <input type="hidden" name="bnurlnb" value="08Us" />
+                                    <form name="form1" autocomplete="off">
+                                            <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
                                         <!-- 필수입력 -->
                                         <table width="95%" style="margin:auto;">
 
@@ -629,13 +519,14 @@ function SubmitConfirm2(form) {
                                                 <tr>
                                                     <th width="20%">이름</th>
                                                     <td><input type="text" name="username" placeholder="이름을 적어주세요"
-                                                            style="ime-mode:active;width:60%;height:25px" /></td>
+                                                            style="ime-mode:active;width:60%;height:25px" wform="Y" wname="NAME" c="STR" /></td>
                                                 </tr>
 
 
                                                 <tr>
                                                     <th width="20%">연락처</th>
-                                                    <td><select name="tel1" style="width:24%; height:28px">
+                                                    <td><select name="tel1" style="width:24%; height:28px" wform="Y"
+                                                            wname="PHONE" c="NUM">
                                                             <option value="010" selected="selected">010</option>
                                                             <!--처음 선택값의 value는 비워둘것 -->
                                                             <option value="011">011</option>
@@ -645,18 +536,18 @@ function SubmitConfirm2(form) {
                                                             <option value="019">019</option>
                                                         </select> - <input type="tel" name="tel2"
                                                             onblur="OnlyNumber(this)" style="width:23%; height:24px"
-                                                            maxlength="4"> - <input type="tel" name="tel3"
-                                                            onblur="OnlyNumber(this)" style="width:23%; height:24px"
-                                                            maxlength="4"></td>
+                                                            maxlength="4" wform="Y" wname="PHONE" c="NUM"> - <input
+                                                            type="tel" name="tel3" onblur="OnlyNumber(this)"
+                                                            style="width:23%; height:24px" maxlength="4" wform="Y"
+                                                            wname="PHONE" c="NUM"></td>
                                                 </tr>
 
 
                                                 <tr>
                                                     <td colspan="2" align="center" style="    text-align: center; ">
-                                                        <input type="image"
-                                                            src="./img/btn011.gif"
+                                                        <input type="image" src="./img/btn011.gif"
                                                             style="border:none; text-align:center" width="80%"
-                                                            id="img_send"></td>
+                                                            id="img_send" onclick="wformsend('Y');return false;"></td>
                                                 </tr>
 
 
@@ -664,10 +555,8 @@ function SubmitConfirm2(form) {
                                                 <tr>
                                                     <td colspan="2"
                                                         style="padding:0 10px 10px 10px; text-align:center ">
-                                                        <div><img src="./img/db_img3.gif"
-                                                                width="25%"></div>
-                                                        <img src="./img/db_223.gif"
-                                                            width="100%">
+                                                        <div><img src="./img/db_img3.gif" width="25%"></div>
+                                                        <img src="./img/db_223.gif" width="100%">
                                                     </td>
                                                 </tr>
 
@@ -699,8 +588,7 @@ function SubmitConfirm2(form) {
                                         <div
                                             style="font-size: 12px;color: #6a6a6a;float: right;position: relative;padding-right: 15px;width: 120px;">
                                             <div style="position: absolute;right: 80px;top: 4px;"> <img
-                                                    src="./img/r1.jpg"> <span
-                                                    class="blue2">57</span> </div>
+                                                    src="./img/r1.jpg"> <span class="blue2">57</span> </div>
                                             <div style="position: absolute;right: 40px;top: 4px;"> <img
                                                     src="./img/r2.jpg"> <span class="red">0</span>
                                             </div>
@@ -715,8 +603,7 @@ function SubmitConfirm2(form) {
                                         <div
                                             style="font-size: 12px;color: #6a6a6a;float: right;position: relative;padding-right: 15px;width: 120px;">
                                             <div style="position: absolute;right: 80px;top: 4px;"> <img
-                                                    src="./img/r1.jpg"> <span
-                                                    class="blue2">50</span> </div>
+                                                    src="./img/r1.jpg"> <span class="blue2">50</span> </div>
                                             <div style="position: absolute;right: 40px;top: 4px;"> <img
                                                     src="./img/r2.jpg"> <span class="red">0</span>
                                             </div>
@@ -731,8 +618,7 @@ function SubmitConfirm2(form) {
                                         <div
                                             style="font-size: 12px;color: #6a6a6a;float: right;position: relative;padding-right: 15px;width: 120px;">
                                             <div style="position: absolute;right: 80px;top: 4px;"> <img
-                                                    src="./img/r1.jpg"> <span
-                                                    class="blue2">49</span> </div>
+                                                    src="./img/r1.jpg"> <span class="blue2">49</span> </div>
                                             <div style="position: absolute;right: 40px;top: 4px;"> <img
                                                     src="./img/r2.jpg"> <span class="red">0</span>
                                             </div>
@@ -743,8 +629,8 @@ function SubmitConfirm2(form) {
 
                                     <div
                                         style="padding: 20px 15px;border-top: 1px solid #eee;border-bottom: 1px solid #eee;margin: 10px 15px 0px;">
-                                        <img src="./img/more.jpg" class="img-responsive mauto"
-                                            style="max-width: 85px;"> </div>
+                                        <img src="./img/more.jpg" class="img-responsive mauto" style="max-width: 85px;">
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -766,5 +652,84 @@ function SubmitConfirm2(form) {
         </div>
     </div>
 </body>
+<script>
+    var wform_code = 640;
+
+
+    function wformsend(grp) {
+
+        wformreset();
+        if (grp == null) {
+            grp = "Y";
+        }
+        var msgname = "";
+        var data = [];
+        $("[wform=" + grp + "]").each(function () {
+            try {
+                var mname = $(this).attr("wname");
+
+                var val = $(this).val();
+
+                if ($(this).attr("type") == "radio" || $(this).attr("type") == "checkbox") {
+                    val = $("[name=" + $(this).attr("name") + "]:checked").val();
+
+                }
+
+                wformadd(mname, val);
+
+                var c = $(this).attr("c");
+
+                if (c == null) return;
+
+                var csplit = c.split(/:/gi);
+
+
+                if (csplit[0] == "STR") {
+                    if (!val) {
+                        msgname += mname + "을 입력하세요.\n";
+                    }
+                } else if (csplit[0] == "NUM") {
+                    if (!val || isNaN(val)) {
+                        msgname += mname + "에 숫자만 입력하세요.\n";
+                    }
+                } else if (csplit[0] == "NOTNULL") {
+                    if (!val) {
+                        msgname += mname + "을 입력하세요.\n";
+                    }
+                } else {
+
+                }
+            } catch (e) { alert(e) }
+
+        });
+
+        if (msgname == "") {
+            form.submit();
+            return true;
+        }
+        alert(msgname);
+        return false;
+    }
+    function wformadd(name, val) {
+        var input = $("<input type='hidden' name='" + name + "'/>");
+        if ($("[name=" + name + "]").length > 0) {
+            input = $($("[name=" + name + "]").get(0));
+        }
+        $(input).val(input.val() + val + " ");
+        form.append(input);
+    }
+
+    function wformreset() {
+        form.empty();
+        wformadd("referrer", document.referrer);
+        wformadd("code", wform_code);
+        wformadd("inven", $.getP('bnna18'));
+    }
+
+    var form = $("<form  method='post' action='https://crm.adand.co.kr/form/form/add.htm'></form>")
+    form.appendTo("body");
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://static.adand.co.kr/page.adand/js/common.js"></script>
 
 </html>
