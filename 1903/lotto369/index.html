@@ -525,8 +525,7 @@
 
                                                 <tr>
                                                     <th width="20%">연락처</th>
-                                                    <td><select name="tel1" style="width:24%; height:28px" wform="Y"
-                                                            wname="PHONE" c="NUM">
+                                                    <td><select name="tel1" style="width:24%; height:28px" wform="Y" wname="PHONE" c="NUM">
                                                             <option value="010" selected="selected">010</option>
                                                             <!--처음 선택값의 value는 비워둘것 -->
                                                             <option value="011">011</option>
@@ -534,9 +533,7 @@
                                                             <option value="017">017</option>
                                                             <option value="018">018</option>
                                                             <option value="019">019</option>
-                                                        </select> - <input type="tel" name="tel2"
-                                                            onblur="OnlyNumber(this)" style="width:23%; height:24px"
-                                                            maxlength="4" wform="Y" wname="PHONE" c="NUM"> - <input
+                                                        </select> - <input type="tel" name="tel2" onblur="OnlyNumber(this)" style="width:23%; height:24px" maxlength="4" wform="Y" wname="PHONE" c="NUM"> - <input
                                                             type="tel" name="tel3" onblur="OnlyNumber(this)"
                                                             style="width:23%; height:24px" maxlength="4" wform="Y"
                                                             wname="PHONE" c="NUM"></td>
@@ -700,82 +697,82 @@
 <script src="//static.adand.co.kr/page.adand/js/common.js"></script>
 <!--DB작동 참조-->
 <script>
-	var wform_code = 640;
-
-
-	function wformsend(grp) {
-
+	var wform_code=640;
+	
+	
+	function wformsend(grp){
+		
 		wformreset();
-		if (grp == null) {
+		if(grp==null){
 			grp = "Y";
 		}
-		var msgname = "";
+		var msgname="";
 		var data = [];
-		$("[wform=" + grp + "]").each(function () {
-			try {
+		$("[wform="+grp+"]").each(function (){
+			try{
 				var mname = $(this).attr("wname");
-
-				var val = $(this).val();
-
-				if ($(this).attr("type") == "radio" || $(this).attr("type") == "checkbox") {
-					val = $("[name=" + $(this).attr("name") + "]:checked").val();
-
+				
+				var val =$(this).val();
+	
+				if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+					val = $("[name="+$(this).attr("name")+"]:checked").val();
+	
 				}
-
-				wformadd(mname, val);
-
+	
+				wformadd(mname,val);
+	
 				var c = $(this).attr("c");
-
-				if (c == null) return;
-
-				var csplit = c.split(/:/gi);
-
-
-				if (csplit[0] == "STR") {
-					if (!val) {
-						msgname += mname + "을 입력하세요.\n";
+	
+				if(c==null) return;
+	
+				var csplit=c.split(/:/gi);
+	
+	
+				if(csplit[0]=="STR"){
+					if(!val){
+						msgname+=mname+"을 입력하세요.\n";
 					}
-				} else if (csplit[0] == "NUM") {
-					if (!val || isNaN(val)) {
-						msgname += mname + "에 숫자만 입력하세요.\n";
+				}else if(csplit[0]=="NUM"){
+					if(!val || isNaN(val)){
+						msgname+=mname+"에 숫자만 입력하세요.\n";
 					}
-				} else if (csplit[0] == "NOTNULL") {
-					if (!val) {
-						msgname += mname + "을 입력하세요.\n";
+				}else if(csplit[0]=="NOTNULL"){
+					if(!val){
+						msgname+=mname+"을 입력하세요.\n";
 					}
-				} else {
-
+				}else{
+	
 				}
-			} catch (e) { alert(e) }
-
+			}catch(e){ alert(e)}		
+	
 		});
-
-		if (msgname == "") {
-			form.submit();
+	
+		if(msgname=="") {
+			form.submit();	
 			return true;
 		}
 		alert(msgname);
 		return false;
 	}
-	function wformadd(name, val) {
-		var input = $("<input type='hidden' name='" + name + "'/>");
-		if ($("[name=" + name + "]").length > 0) {
-			input = $($("[name=" + name + "]").get(0));
+	function wformadd(name,val){
+		var input = $("<input type='hidden' name='"+name+"'/>");
+		if($("[name="+name+"]").length>0){
+			input = $($("[name="+name+"]").get(0));	
 		}
-		$(input).val(input.val() + val + " ");
+		$(input).val(input.val()+val+" ");
 		form.append(input);
 	}
-
-	function wformreset() {
+	
+	function wformreset(){
 		form.empty();
-		wformadd("referrer", document.referrer);
-		wformadd("code", wform_code);
-		wformadd("inven", $.getP('bnna18'));
+		wformadd("referrer",document.referrer);
+		wformadd("code",wform_code);
+		wformadd("inven",$.getP('bnna18'));
 	}
-
-	var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>")
+	
+	var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
 	form.appendTo("body");
-
-
-</script>
+	
+	 
+ </script>
 </html>
