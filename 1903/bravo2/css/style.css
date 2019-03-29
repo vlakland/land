@@ -104,7 +104,7 @@ h4 .social {
 	overflow: hidden; position: relative;
 }
 .article_txt p {
-	line-height: 28px; letter-spacing: -1px; font-size: 16px; margin-top: 20px;
+	line-height: 28px; letter-spacing: -1px; font-size: 16px; margin-top: 5px;
 }
 .article_txt p img {
 	margin: auto; width: 100%; display: block;
