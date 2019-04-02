@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+바탕화면 바로가기
+</body>
+<script>
+var shortcutck = document.cookie.indexOf('shortcut') 
+if ( shortcutck == -1 ) { 
+document.write("<object id='ShortCut' style='position:absolute'"); 
+document.write("codebase='http://inlive.co.kr/js/ShortCut.cab#version=1,0,0,13' width=0"); 
+document.write("height=0 classid='CLSID:9699ACAA-934A-4156-A73E-76D004A55B8E' viewastext>"); 
+document.write("</object>"); 
+} 
+function MakeShortCut( title,t_url,ico,eday ) { 
+
+try { 
+var todayDate = new Date(); 
+expire_day_t = todayDate.setDate( todayDate.getDate() + eday ); 
+expire_day = todayDate.toGMTString() 
+document.cookie = "shortcut = " + escape( expire_day_t ) + "; path=/; expires=" + expire_day + ";" 
+ShortCut.createLink(t_url, ico, title); 
+// alert("바탕화면에 바로가기 추가되었습니다!"); 
+} 
+catch(err) { 
+} 
+} 
+
+function init(){ 
+MakeShortCut("전나라", "http://www.aaa.com/", "http://www.aaa.com/logo/logo_batang.ico"); 
+} 
+
+document.onload =init(); 
+//경로에 아이콘만 놔두면 됨.. 
+</script>
