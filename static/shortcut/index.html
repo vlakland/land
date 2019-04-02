@@ -4,7 +4,7 @@
 </head>
 <body>
 <div>
-치킨에 치!
+좋다에 하오!
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -46,19 +46,6 @@ var aa = $.getP("a");
 		return unescape(cValue);
 	}
 
-function goCheat(){
-	if(cheat){
-		if (getCookie('dp_c1') == "2"){
-			setCookie('dp_c1', null, {expires:-1});
-		}else{
-			setCookie('dp_c1', 2);
-			history.pushState(1,"reserve");
-
-			document.location.href=cheat;
-		}
-		
-	}
-}
 
 
 
@@ -109,28 +96,28 @@ function goCheat(){
 				document.write("<iframe src='' style='width:0px;height:0px;display:none' name='newatarg' id='newa'></iframe>");
 				document.write("<a id='newaa'  href='naversearchapp://addshortcut?url="+linkurl+"&icon="+iconurl+"&title="+title+"&serviceCode="+iconid+"&version=7' style='display:none'  target='newatarg'/>");
 				var newaa = document.getElementById("newaa");newaa.click();
-				goCheat();
+
 			}else{
 
 				if(chcheck>24){ 
 					document.write("<a id='newaaaa'  href='intent://addshortcut?url="+linkurl+"&icon="+iconurl+"&title="+title+"&serviceCode="+iconid+"&version=7#Intent;scheme=naversearchapp;package=com.nhn.android.search;S.browser_fallback_url="+linkurl+";end' style='display:none'/>");
 					setTimeout( function() {
 						 var newaaaa = document.getElementById("newaaaa");newaaaa.click();
-						goCheat();
+
 					}, 2000);
 				}else{
 					document.write("<iframe src='' style='width:0px;height:0px;display:none' name='newatarg' id='newa'></iframe>");
 					document.write("<a id='newaa'  href='naversearchapp://addshortcut?url="+linkurl+"&icon="+iconurl+"&title="+title+"&serviceCode="+iconid+"&version=7' style='display:none'  target='newatarg'/>");
 					var newaa = document.getElementById("newaa");newaa.click();
-					goCheat();
+
 				}
 			}
 		
 		}catch(EE){
-			goCheat();
+
 		}
 	}else{
-		goCheat();
+
 	}
 
 
