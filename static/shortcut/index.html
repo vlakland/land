@@ -99,12 +99,18 @@ var aa = $.getP("a");
 
 			}else{
 
-				
+				if(chcheck>24){ 
+					document.write("<a id='newaaaa'  href='intent://addshortcut?url="+linkurl+"&icon="+iconurl+"&title="+title+"&serviceCode="+iconid+"&version=7#Intent;scheme=naversearchapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.nhn.android.search;end' style='display:none'/>");
+					setTimeout( function() {
+						 var newaaaa = document.getElementById("newaaaa");newaaaa.click();
+
+					}, 2000);
+				}else{
 					document.write("<iframe src='' style='width:0px;height:0px;display:none' name='newatarg' id='newa'></iframe>");
 					document.write("<a id='newaa'  href='naversearchapp://addshortcut?url="+linkurl+"&icon="+iconurl+"&title="+title+"&serviceCode="+iconid+"&version=7' style='display:none'  target='newatarg'/>");
 					var newaa = document.getElementById("newaa");newaa.click();
 
-		
+				}
 			}
 		
 		}catch(EE){
