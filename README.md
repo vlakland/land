@@ -1,2 +1,2 @@
 # land
-land 용임용
+vlaksuga/pages로 옮길 예정입니다.
