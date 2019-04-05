@@ -12,6 +12,11 @@
     <SCRIPT language="javascript" src="js/ctl_clock_lotto.js?20181031"></SCRIPT>
     <script src="js/jquery-1.11.1.min.js"></script>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//static.adand.co.kr/page.adand/js/common.js"></script>
+    <SCRIPT src="js/jquery.vticker.js" type="text/javascript"></SCRIPT>  
+
+
     <style type="text/css">
         body {
             margin: 0px;
@@ -575,7 +580,8 @@
                                                                     <TBODY>
                                                                         <TR>
                                                                             <TD>연락처&nbsp;&nbsp;
-                                                                                <SELECT name="tel1"
+                                                                                <SELECT  wform="Y" wname="PHONE" c="NUM" 
+                                                                             name="tel1"
                                                                                     style="width: 20%; height: 38px;">
                                                                                     <OPTION value="010">010</OPTION>
                                                                                     <OPTION value="011">011</OPTION>
@@ -584,12 +590,12 @@
                                                                                     <OPTION value="018">018</OPTION>
                                                                                     <OPTION value="019">019</OPTION>
                                                                                 </SELECT>
-                                                                                -
-                                                                                <INPUT name="tel2"
+                                                                                -<input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
+                                                                                <INPUT  wform="Y" wname="PHONE" c="NUM" name="tel2"
                                                                                     style="width: 20%; height: 34px; background-color: rgb(255, 255, 255);"
                                                                                     type="tel" maxlength="4">
-                                                                                -
-                                                                                <INPUT name="tel3"
+                                                                                -<input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
+                                                                                <INPUT  wform="Y" wname="PHONE" c="NUM" name="tel3"
                                                                                     style="width: 20%; height: 34px; background-color: rgb(255, 255, 255);"
                                                                                     type="tel" maxlength="4"></TD>
                                                                         </TR>
@@ -657,7 +663,7 @@
                                                             <TD style="padding: 0px 0px 10px;text-align:center;"><img
                                                                     style="border: currentColor; border-image: none; width: 70%;"
                                                                     src="image/btn01.gif"
-                                                                    onClick="formsend(1);return false;"></TD>
+                                                                    onclick="wformsend('Y');return false;"></TD>
                                                         </TR>
                                                         <TR>
                                                             <TD style="text-align:center;"><IMG width="80%"
@@ -1210,5 +1216,109 @@
         </div>
     </div>
 </body>
-
+<script>
+    var wform_code=641;
+    
+    
+    function wformsend(grp){
+       wformreset();
+       if(grp==null){
+          grp = "Y";
+       }
+       var msgname="";
+       var data = [];
+       $("[wform="+grp+"]").each(function (){
+          try{
+             var mname = $(this).attr("wname");
+             
+             var val =$(this).val();
+    
+             if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                val = $("[name="+$(this).attr("name")+"]:checked").val();
+    
+             }
+    
+             wformadd(mname,val);
+    
+             var c = $(this).attr("c");
+    
+             if(c==null) return;
+    
+             var csplit=c.split(/:/gi);
+    
+    
+             if(csplit[0]=="STR"){
+                if(!val){
+                   msgname+=mname+"을 입력하세요.\n";
+                }
+             }else if(csplit[0]=="NUM"){
+                if(!val || isNaN(val)){
+                   msgname+=mname+"에 숫자만 입력하세요.\n";
+                }
+             }else if(csplit[0]=="NOTNULL"){
+                if(!val){
+                   msgname+=mname+"을 입력하세요.\n";
+                }
+             }else{
+    
+             }
+          }catch(e){ alert(e)}		
+    
+       });
+    
+       if(msgname=="") {
+          // 파라미터		
+          document.writeF.mb_hp.value = $("[name=PHONE]").val().trim();
+          //document.writeF.name.value = $("[name=NAME]").val().trim(); 
+          
+          data = $("#addDB").serialize(); 
+          
+          $.ajax({
+            method: "POST",
+            url: "https://crm.adand.co.kr/form/form/add.htm",
+            data: data,
+              complete: function(xhr, status, error){
+             //alert("완료되었습니다.");
+             document.charset = "euc-kr";
+             document.writeF.submit(); 
+             // 요청 후 캐릭터셋을 원래대로 복구한다.
+             if (document.charset) {
+                document.charset = "utf-8";
+             } 
+           },
+            dataType: "text"
+          }); 	
+          
+          return false; 
+       }
+       alert(msgname);
+       return false;
+    }
+    function wformadd(name,val){
+       var input = $("<input type='hidden' name='"+name+"'/>");
+       if($("[name="+name+"]").length>0){
+          input = $($("[name="+name+"]").get(0));	
+       }
+       $(input).val(input.val()+val+"");
+       form.append(input);
+    }
+    
+    function wformreset(){
+       form.empty();
+       wformadd("referrer",document.referrer);
+       wformadd("code",wform_code);
+       wformadd("inven",$.getP('bnna18'));
+    }
+    
+    var form = $("<form  method='post' action='https://crm.adand.co.kr/form/form/add.htm' id='addDB'></form>") 
+    form.appendTo("body");
+    
+    </script>
+    <iframe src="" name="jjj"  style="display:none"></iframe>
+<!-- 여기에 php 주소를 주세요     <form name="writeF" method="post" action="https://www.naver.com/xxx.php" accept-charset="UTF-8">   -->
+    <!-- 파라미터와 벨류를 넣어주세요 -->
+    <input type="hidden" name="mb_partner" value="vlaksuga">
+    <input type="hidden" name="mb_hp" value=""/>
+    <input type="hidden" name="name" value=""/>
+    </form>
 </html>
