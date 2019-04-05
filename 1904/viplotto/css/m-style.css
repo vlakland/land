@@ -18,7 +18,7 @@ h2 { font-family:"맑은 고딕"; font-size:15px; line-height:23px; padding:5px 
 .re_txt { font-family:"맑은 고딕"; font-size:13px; padding:15px 10px;}
 .re_date {  font-family:"맑은 고딕"; font-size:13px; color:#666;}
 
-.db_wrap { padding:10px; background:#FFF;}
+.db_wrap { padding:10px; background:#FFF; border: 2px solid red}
 .db_wrap td { font-family:"맑은 고딕"; font-size:16px; color:#000; line-height:24px; padding:3px 0; font-weight:bold; color:#FFF;}
 
 .news-container { width:100%;  overflow: hidden; position: relative; }
