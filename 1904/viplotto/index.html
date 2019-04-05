@@ -22,6 +22,29 @@ $(".news-container").vTicker({
 	});
 });
 </SCRIPT>
+<script>
+      var cTime=new Date()
+      var oneTime=new Date(2000,1,1,1,0)-new Date(2000,1,1,0,0)
+      var targetTime= ((new Date(cTime.getFullYear(),cTime.getMonth(),cTime.getDate(),cTime.getHours())*1)+oneTime)
+      function disCount(){
+         showTime=new Date(targetTime-(new Date()*1))
+         minx=zero(showTime.getMinutes())
+         secx=zero(showTime.getSeconds())
+         //min_1.innerText=minx
+         //sec_1.innerText=secx
+         min_2.innerText=minx
+         sec_2.innerText=secx
+         
+   
+      }
+      function zero(a) {
+         b=a*1
+         if(b<10){return "0"+a}
+      else{ return b;}
+      }
+      setInterval(disCount,1000)
+   
+   </script>
 </head>
 
 <body>
