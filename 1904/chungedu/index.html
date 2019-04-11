@@ -73,7 +73,27 @@
             height: 0;
             
         }
+        .dbbox {
+            padding: 2% 15% 4%;
+            background: #f0f0f0;
 
+        }
+        .formlabel {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .formfield {
+            padding-left: 155px;
+            width: 100%;
+            line-height: 67px;
+            position: relative;
+            margin: 0;
+        }
         .wrapper {
             text-align: center;
             max-width: 900px;
@@ -147,20 +167,20 @@
                                                 name="NAME" class="w_full" size="15" title="이름을 적습니다."
                                                 placeholder="이름을 적어주세요" /></div>
                                     </div>
-                                    <div class="jw frm row field w_160">
-                                        <label class="jw frm f-inventory" for="TEL">연락처</label>
+                                    <div class="formfield">
+                                        <label class="formlabel" for="TEL">연락처</label>
                                         <div class="jw frm f-container contents"><input type="tel" id="TEL" name="TEL"
                                                 size="16" class="action-tel-auto-format w_full" maxlength="16"
                                                 title="휴대전화를 적습니다." placeholder="연락처 -(하이픈)없이 입력" /></div>
                                     </div>
-                                    <div class="jw frm row field w_160">
-                                        <label class="jw frm f-inventory" for="AGE">상담자 연령</label>
+                                    <div class="formfield">
+                                        <label class="formlabel" for="AGE">상담자 연령</label>
                                         <div class="jw frm f-container contents"><input type="tel" id="AGE" name="AGE"
                                                 size="16" class="w_full" maxlength="3" title="나이를 적습니다."
                                                 placeholder="00"><span class="age-text">세</span></div>
                                     </div>
-                                    <div class="jw frm row field w_160">
-                                        <label class="jw frm f-inventory right" for="ETC_1">창업희망지역</label>
+                                    <div class="formfield">
+                                        <label class="formlabel" for="ETC_1">창업희망지역</label>
                                         <div class="jw frm f-container contents"><input type="text" id="ETC_1"
                                                 name="ETC_1" class="w_full" size="15" title="독점희망지역을 적습니다."
                                                 placeholder="ex)강남구 삼성동" /></div>
@@ -183,7 +203,7 @@
                 </div>
             </div>
             <footer class="jw layout">
-                <div class="jw wr_900 sec2">
+                <div class="imagebox">
                     <img src="image/footer.png" alt="">
                 </div>
             </footer>
