@@ -83,7 +83,8 @@
         }
 
         .dbbox {
-            padding: 2% 15% 4%;
+            margin: 0 auto;
+            padding: 0;
             background: #f0f0f0;
 
         }
@@ -98,15 +99,37 @@
         }
 
         .formfield {
-            padding-left: 155px;
+            padding-left: 40%;
+            text-align: left;
+            font-size: 1em;
             width: 100%;
             line-height: 67px;
+            font-weight: 600;
             position: relative;
             margin: 0;
-            text-align: left;
         }
+
+
+        .area-box {
+            width: 50%;
+            margin:0 auto;
+            text-align: center;
+        }
+
+        .inputbox {
+
+        }
+
         .formlabel {
-            font-weight: 600;
+            padding-top:1%;
+        }
+
+        .textfield {
+            margin-bottom: 5%;
+        }
+
+        .w_full {
+            line-height: 25px;
         }
 
         .wrapper {
@@ -173,33 +196,34 @@
                 <div class="imagebox"><img src="image/section-image-07.png" alt="">
                 </div>
                 <div class="imagebox"><img src="image/section-image-08.png" alt="">
-                    <div class="dbbox">
+                </div>
+                <div class="dbbox">
                         <form id="vlsg" class="form1">
                             <div class="area-box">
                                 <div class="formfield">
                                     <label class="formlabel" for="NAME">성함</label>
                                     <div class="inputbox"><input type="text" id="NAME" name="NAME" class="w_full"
-                                            size="15" title="이름을 적습니다." placeholder="이름을 적어주세요" /></div>
+                                            size="25" title="이름을 적습니다." placeholder="이름을 적어주세요" /></div>
                                 </div>
                                 <div class="formfield">
                                     <label class="formlabel" for="TEL">연락처</label>
                                     <div class="jw frm f-container contents"><input type="tel" id="TEL" name="TEL"
-                                            size="16" class="action-tel-auto-format w_full" maxlength="16"
+                                            size="25" class="w_full" maxlength="16"
                                             title="휴대전화를 적습니다." placeholder="연락처 -(하이픈)없이 입력" /></div>
                                 </div>
                                 <div class="formfield">
                                     <label class="formlabel" for="AGE">상담자 연령</label>
                                     <div class="jw frm f-container contents"><input type="tel" id="AGE" name="AGE"
-                                            size="16" class="w_full" maxlength="3" title="나이를 적습니다."
-                                            placeholder="00"><span class="age-text">세</span></div>
+                                            size="25" class="w_full" maxlength="3" title="나이를 적습니다."
+                                            placeholder="00"><span class="age-text"></span></div>
                                 </div>
                                 <div class="formfield">
                                     <label class="formlabel" for="ETC_1">창업희망지역</label>
                                     <div class="jw frm f-container contents"><input type="text" id="ETC_1" name="ETC_1"
-                                            class="w_full" size="15" title="독점희망지역을 적습니다." placeholder="ex)강남구 삼성동" />
+                                            class="w_full" size="25" title="독점희망지역을 적습니다." placeholder="ex)강남구 삼성동" />
                                     </div>
                                 </div>
-                                <div class="jw frm row field contents text-align privacy">
+                                <div class="textfield">
                                     <span class="nowrap"><input type="checkbox" name="AGREE" id="AGREE"
                                             checked="checked" />
                                         <label for="AGREE">개인정보취급방침 동의</label>
@@ -208,15 +232,13 @@
                                 <div class="jw frm row contents privacy-detail" style="display: none;">
                                     <img src="image/consult_privacy_text.png" alt="">
                                 </div>
-                            </div>
-                            <div class="imagebox">
-                                <div class="buttonbox">
-                                    <input type="image" src="image/btn_consult_apply.png" alt="무료상담신청하기">
+                                <div class="imagebox" style="padding-bottom: 5%;">
+                                            <input type="image" style="width:100%;" src="image/btn_consult_apply.png" alt="무료상담신청하기">
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>
+
             </div>
             <footer class="jw layout">
                 <div class="imagebox">
