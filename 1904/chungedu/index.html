@@ -18,9 +18,7 @@
         body {
             font-size: 16px;
             line-height: 16px;
-            word-break: keep-all;
             letter-spacing: -0.01em;
-            word-wrap: break-word;
         }
 
         ul,
@@ -65,10 +63,8 @@
             -webkit-box-sizing: border-box;
         }
 
-        #skip-navigation,
-        legend,
-        .hidden {
-            display: none;
+        .wrapper {
+            margin: 0 auto;
         }
 
         img {
@@ -89,14 +85,22 @@
         <div class="jw container wr_900">
             <div class="content-wrap">
                 <div class="imagebox">
-                <picture>
-                        <source media="(min-width: 650px)" srcset="image/section-image-01.png">
+                    <picture>
+                        <source media="(min-width: 650px)" srcset="image/w-section-image-01.png">
                         <img src="image/section-image-01.png" alt="section-image-01">
-                </picture>
-                    </div>
-                <div class="imagebox"><img src="image/section-image-02.png" alt="">
+                    </picture>
                 </div>
-                <div class="imagebox"><img src="image/section-image-03.png" alt="">
+                <div class="imagebox">
+                    <picture>
+                        <source media="(min-width: 650px)" srcset="image/w-section-image-02.png">
+                        <img src="image/section-image-02.png" alt="section-image-02">
+                    </picture>
+                </div>
+                <div class="imagebox">
+                    <picture>
+                        <source media="(min-width: 650px)" srcset="image/w-section-image-03.png">
+                        <img src="image/section-image-03.png" alt="section-image-03">
+                    </picture>
                 </div>
                 <div class="imagebox"><img src="image/section-image-04.png" alt="">
                 </div>
@@ -106,18 +110,24 @@
                             frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="imagebox"><img src="image/section-image-05.png" alt="">
+                <div class="imagebox">
+                    <picture>
+                        <source media="(min-width: 650px)" srcset="image/w-section-image-05.png">
+                        <img src="image/section-image-05.png" alt="section-image-05">
+                    </picture>
                 </div>
-                <div class="imagebox"><img src="image/section-image-06.png" alt="">
+                <div class="imagebox">
+                    <picture>
+                        <source media="(min-width: 650px)" srcset="image/w-section-image-06.png">
+                        <img src="image/section-image-06.png" alt="section-image-06">
+                    </picture>
                 </div>
                 <div class="imagebox"><img src="image/section-image-07.png" alt="">
                 </div>
                 <div class="imagebox"><img src="image/section-image-08.png" alt="">
-                    <div class="jw sec-content sec1">
-                        <form id="frm-01" class="jw frm">
-                            <fieldset class="jw frm">
-                                <legend>신청폼</legend>
-                                <div class="area-box">
+                    <div class="dbbox">
+                        <form id="vlsg" class="form1">
+                            <div class="area-box">
                                     <div class="jw frm row field w_150">
                                         <label class="jw frm f-inventory" for="NAME">성함</label>
                                         <div class="jw frm f-container contents"><input type="text" id="NAME"
