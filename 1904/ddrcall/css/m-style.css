@@ -198,7 +198,7 @@ h2 {
 .dbform .item-col-2 .field { }
 .dbform .label,
 .dbform .field { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.dbform .label { position: absolute; width: 120px; text-align: left; line-height: 50px; font-weight: bold; height: 50px; letter-spacing: -0.1em; }
+.dbform .label { position: absolute; width: 120px; text-align: center; line-height: 50px; font-weight: bold; height: 50px; letter-spacing: -0.1em; }
 .dbform .field { vertical-align: top; margin-left: 120px; }
 .dbform .field-desc { display: inline-block; margin-top: 3px; margin-left: 5px; margin-bottom: 0; color: #fff; vertical-align: top; line-height: 1.5em; font-size: 11px; }
 .dbform .dash { display: inline-block; width: 8%; text-align: center; }
