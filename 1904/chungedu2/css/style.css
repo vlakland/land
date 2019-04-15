@@ -11,6 +11,7 @@ body { font-size: 20px; color: #323232; font-family: '맑은 고딕', '나눔고
 :-moz-placeholder { color: #c2c2c2; }
 .placeholder { color: #c2c2c2 !important; }
 .hidden { position: absolute; width: 0; height: 0; font-size: 0; line-height: 0; overflow: hidden; visibility: hidden; }
+.imgbox {width:100%;}
 .imgbox > img,
 .imgbox > a > img { display: block; width: 100%; }
 .banner img { margin: 0 auto; }
