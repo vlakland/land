@@ -58,12 +58,6 @@
                         <div class="video-wrap">
                             <div class="video"><iframe width="100%" height="386" src="https://www.youtube.com/embed/Yl6kRVZNPmE?rel=0&showinfo=0" frameborder="0" allow="encrypted-media" allowfullscreen class="video-box"></iframe></div>
                         </div>
-                        <div class="imagebox">
-                            <picture>
-                                <source media="(min-width: 650px)" srcset="image/w-section-image-07.png">
-                                <img src="image/section-image-07.png" alt="section-image-07">
-                            </picture>
-                        </div>
                         <p style="font-size:25px;">
                             <b>청취에듀만의 경쟁력</b><hr/>
                         </p>
@@ -88,10 +82,9 @@
                             </p>
                         <!-- 신청폼 -->
                         <div class="dbform" id="dbform">
+                                <input name="INVEN" value="미파악됨" type="hidden">
                             <div class="imgbox"><img src="image/form_title.jpg" alt=""></div>
 				<form name="app_fm" class="form">
-                        <input name="INVEN" value="미파악됨" type="hidden">
-                        <input wname="FORMNAME" wform="Y" value="2번" type="hidden">
                                 <div class="item-list">
                                     <div class="item-row">
                                         <label for="f1" class="label">성함</label>
@@ -115,6 +108,12 @@
                                         <label for="f5" class="label">창업희망지역</label>
                                         <div class="field">
                                             <input type="text" class="text" id="f5" name="wr_6" size="10" itemname="창업희망지역" placeholder="ex)강남구 삼성동" wform="Y" wname="AREA" c="STR">
+                                        </div>
+                                    </div>
+                                    <div class="item-row">
+                                        <label for="f4" class="label">상담시간</label>
+                                        <div class="field">
+                                            <input type="text" class="text" id="f4" name="wr_7" size="10" itemname="상담시간" wform="Y" wname="TIME" c="STR">
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +173,7 @@ $(function() {
 </script>
 
 <script>
-    var wform_code=642;
+    var wform_code=644;
     
     
     function wformsend(grp){
