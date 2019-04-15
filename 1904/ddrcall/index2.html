@@ -132,13 +132,6 @@
                         </div>
                     </div>
                     <div class="item-row">
-                        <label for="f3" class="label">상담자 연령</label>
-                        <div class="field age-field">
-                            <input type="text" class="text" id="f3" name="wr_5" size="10" itemname="상담자 연령" wform="Y"
-                                wname="AGE" c="NUM">
-                        </div>
-                    </div>
-                    <div class="item-row">
                         <label for="f5" class="label">창업희망지역</label>
                         <div class="field">
                             <input type="text" class="text" id="f5" name="wr_6" size="10" itemname="창업희망지역"
@@ -292,5 +285,85 @@
             <p>저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
         </div>
     </footer>
-
 </body>
+<!-- vlsg db  -->
+<script>
+        var wform_code=645;
+        
+        
+        function wformsend(grp){
+          
+          wformreset();
+          if(grp==null){
+            grp = "Y";
+          }
+          var msgname="";
+          var data = [];
+          $("[wform="+grp+"]").each(function (){
+            try{
+              var mname = $(this).attr("wname");
+              
+              var val =$(this).val();
+        
+              if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                val = $("[name="+$(this).attr("name")+"]:checked").val();
+        
+              }
+        
+              wformadd(mname,val);
+        
+              var c = $(this).attr("c");
+        
+              if(c==null) return;
+        
+              var csplit=c.split(/:/gi);
+        
+        
+              if(csplit[0]=="STR"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NUM"){
+                if(!val || isNaN(val)){
+                  msgname+=mname+"에 숫자만 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NOTNULL"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else{
+        
+              }
+            }catch(e){ alert(e)}		
+        
+          });
+        
+          if(msgname=="") {
+            form.submit();	
+            return true;
+          }
+          alert(msgname);
+          return false;
+        }
+        function wformadd(name,val){
+          var input = $("<input type='hidden' name='"+name+"'/>");
+          if($("[name="+name+"]").length>0){
+            input = $($("[name="+name+"]").get(0));	
+          }
+          $(input).val(input.val()+val+" ");
+          form.append(input);
+        }
+        
+        function wformreset(){
+          form.empty();
+          wformadd("referrer",document.referrer);
+          wformadd("code",wform_code);
+          wformadd("inven",$.getP('bnna18'));
+        }
+        
+        var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+        form.appendTo("body");
+        
+         
+       </script>
+      <!--DB 작동 영역 끝-->
