@@ -173,7 +173,7 @@ h2 {
 /* 신청폼2 */
 #dbresult { display: block; width: 0; height: 0; }
 .dbform { background: #f0f0f0; overflow: hidden; box-sizing: border-box; }
-.dbform .form { width: 90%; max-width: 520px; margin: 20px auto; }
+.dbform .form { width: 68%; max-width: 520px; margin: 20px auto; }
 .dbform .imgbox { margin-top: 0; width: 100%;}
 .dbform .imgbox img{ width: 100%;}
 
