@@ -6,8 +6,6 @@
 <title>리얼로또2</title>
 <link rel="stylesheet" type="text/css" href="css/m_style.css" />
 <!-- lib -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//static.adand.co.kr/page.adand/js/common.js"></script>
 
 <script>
 	var cTime=new Date()
@@ -360,111 +358,113 @@ border="0"></A></DIV>
 </div>
 
 </body>
-<!--DB 작동 영역 시작-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//static.adand.co.kr/page.adand/js/common.js"></script>
+<!--DB작동 참조-->
 <script>
-  var wform_code=636;
-  
-  
-  function wformsend(grp){
-     wformreset();
-     if(grp==null){
-        grp = "Y";
-     }
-     var msgname="";
-     var data = [];
-     $("[wform="+grp+"]").each(function (){
-        try{
-           var mname = $(this).attr("wname");
-           
-           var val =$(this).val();
-  
-           if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
-              val = $("[name="+$(this).attr("name")+"]:checked").val();
-  
-           }
-  
-           wformadd(mname,val);
-  
-           var c = $(this).attr("c");
-  
-           if(c==null) return;
-  
-           var csplit=c.split(/:/gi);
-  
-  
-           if(csplit[0]=="STR"){
-              if(!val){
-                 msgname+=mname+"을 입력하세요.\n";
-              }
-           }else if(csplit[0]=="NUM"){
-              if(!val || isNaN(val)){
-                 msgname+=mname+"에 숫자만 입력하세요.\n";
-              }
-           }else if(csplit[0]=="NOTNULL"){
-              if(!val){
-                 msgname+=mname+"을 입력하세요.\n";
-              }
-           }else{
-  
-           }
-        }catch(e){ alert(e)}		
-  
-     });
-  
-     if(msgname=="") {
-        // 파라미터		
-        document.writeF.mb_hp.value = $("[name=PHONE]").val().trim();
-        //document.writeF.name.value = $("[name=NAME]").val().trim(); 
-        
-        data = $("#addDB").serialize(); 
-        
-        $.ajax({
-          method: "POST",
-          url: "//crm.adand.co.kr/form/form/add.htm",
-          data: data,
-            complete: function(xhr, status, error){
-           //alert("완료되었습니다.");
-           document.charset = "euc-kr";
-           document.writeF.submit(); 
-           // 요청 후 캐릭터셋을 원래대로 복구한다.
-           if (document.charset) {
-              document.charset = "utf-8";
-           } 
-         },
-          dataType: "text"
-        }); 	
-        
-        return false; 
-     }
-     alert(msgname);
-     return false;
-  }
-  function wformadd(name,val){
-     var input = $("<input type='hidden' name='"+name+"'/>");
-     if($("[name="+name+"]").length>0){
-        input = $($("[name="+name+"]").get(0));	
-     }
-     $(input).val(input.val()+val+"");
-     form.append(input);
-  }
-  
-  function wformreset(){
-     form.empty();
-     wformadd("referrer",document.referrer);
-     wformadd("code",wform_code);
-     wformadd("inven",$.getP('bnna18'));
-  }
-  
-  var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm' id='addDB'></form>") 
-  form.appendTo("body");
-  
-  </script>
-  <iframe src="" name="jjj"  style="display:none"></iframe>
-  <form name="writeF" method="post" action="https://6lotto.co.kr/bbs/register_partner.php" accept-charset="UTF-8">   
-  <input type="hidden" name="mb_partner" value="vlaksuga">
-  <input type="hidden" name="mb_hp" value=""/>
-  <input type="hidden" name="name" value=""/>
-  </form>
-<!--DB 작동 영역 끝-->
+    var wform_code=641;
+    
+    
+    function wformsend(grp){
+       wformreset();
+       if(grp==null){
+          grp = "Y";
+       }
+       var msgname="";
+       var data = [];
+       $("[wform="+grp+"]").each(function (){
+          try{
+             var mname = $(this).attr("wname");
+             
+             var val =$(this).val();
+    
+             if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                val = $("[name="+$(this).attr("name")+"]:checked").val();
+    
+             }
+    
+             wformadd(mname,val);
+    
+             var c = $(this).attr("c");
+    
+             if(c==null) return;
+    
+             var csplit=c.split(/:/gi);
+    
+    
+             if(csplit[0]=="STR"){
+                if(!val){
+                   msgname+=mname+"을 입력하세요.\n";
+                }
+             }else if(csplit[0]=="NUM"){
+                if(!val || isNaN(val)){
+                   msgname+=mname+"에 숫자만 입력하세요.\n";
+                }
+             }else if(csplit[0]=="NOTNULL"){
+                if(!val){
+                   msgname+=mname+"을 입력하세요.\n";
+                }
+             }else{
+    
+             }
+          }catch(e){ alert(e)}		
+    
+       });
+    
+       if(msgname=="") {
+          // 파라미터		
+          document.writeF.PHONENUM.value = $("[name=PHONE]").val().trim();
+          //document.writeF.name.value = $("[name=NAME]").val().trim(); 
+          
+          data = $("#addDB").serialize(); 
+          
+          $.ajax({
+            method: "POST",
+            url: "//crm.adand.co.kr/form/form/add.htm",
+            data: data,
+              complete: function(xhr, status, error){
+             //alert("완료되었습니다.");
+             document.charset = "euc-kr";
+             document.writeF.submit(); 
+             // 요청 후 캐릭터셋을 원래대로 복구한다.
+             if (document.charset) {
+                document.charset = "utf-8";
+             } 
+           },
+            dataType: "text"
+          }); 	
+          
+          return false; 
+       }
+       alert(msgname);
+       return false;
+    }
+    function wformadd(name,val){
+       var input = $("<input type='hidden' name='"+name+"'/>");
+       if($("[name="+name+"]").length>0){
+          input = $($("[name="+name+"]").get(0));	
+       }
+       $(input).val(input.val()+val+"");
+       form.append(input);
+    }
+    
+    function wformreset(){
+       form.empty();
+       wformadd("referrer",document.referrer);
+       wformadd("code",wform_code);
+       wformadd("inven",$.getP('bnna18'));
+    }
+    
+    var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm' id='addDB'></form>") 
+    form.appendTo("body");
+    
+    </script>
+    <iframe src="" name="jjj"  style="display:none"></iframe>
+    <form name="writeF" method="post" action="http://akzw.shop/promo/index.php" accept-charset="UTF-8">   
+    <input type="hidden" name="ADID" value="black">
+    <input type="hidden" name="PHONENUM" value=""/>
+    <input type="hidden" name="name" value=""/>
+    </form>
+  <!--DB 작동 영역 끝-->
 
 </html>
