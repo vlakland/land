@@ -93,7 +93,7 @@ input, select, textarea { border:1px solid #999999; background-color:#f3f3f3; bo
 .bottom_banner {padding:8px 2px 8px 12px; border-bottom:1px solid #dddddd}
 .bottom_banner a { color:#444444}
 
-.db_wrap td{ font-family:"맑은 고딕"; font-size:16px; line-height:24px;}
+.db_wrap td{ font-family:"맑은 고딕"; font-size:16px; line-height:60px;}
 			.input_area { border:2px solid #c4241c; }
 			.input_form { padding:10px; margin-bottom:15px; border-bottom:1px dashed #ddd; }
 			.input_form dl { b4order-bottom:1px dashed #ddd; height:40px; }
