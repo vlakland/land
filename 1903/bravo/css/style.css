@@ -1,0 +1,288 @@
+@import url(./reset.css);
+@import url(./normalize.css);
+@import url( //cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css );
+#scroll_layer {
+	background: rgb(0, 0, 0); width: 100%; bottom: 0px; position: relative;
+}
+#scroll_layer img {
+	width: 100%;
+}
+#wrap {
+	margin: auto; width: 100%; overflow: hidden; font-family: AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif; max-width: 640px;
+}
+#header {
+	
+}
+.gnb {
+	background: rgb(63, 98, 164); margin: auto; padding: 0px 15px; width: 100%; height: 70px; overflow: hidden; box-sizing: border-box;
+}
+h1 {
+	font: 800 25px/normal "Nanum Square"; letter-spacing: -0.5px; margin-top: 18px; float: left; font-size-adjust: none; font-stretch: normal;
+}
+h1 img {
+	width: 150px;
+}
+h2 {
+	font: 400 15px/normal "Nanum Square"; color: rgb(255, 255, 255); letter-spacing: -0.5px; margin-top: 29px; margin-right: 0px; margin-left: 15px; float: left; font-size-adjust: none; font-stretch: normal;
+}
+.gnb_icon {
+	width: 92px; height: 30px; margin-top: 24px; margin-right: 15px; margin-left: 5px; float: right;
+}
+.gnb_icon img {
+	height: 30px;
+}
+.main_news {
+	background: rgb(255, 255, 255); width: 100%; padding-left: 15px; clear: both; margin-top: 7px;
+}
+.menu_wrap {
+	background: rgb(3, 72, 148); padding: 0px; height: 45px;
+}
+.menu_bar {
+	margin: auto; width: 100%; height: 45px; overflow: hidden; position: relative;
+}
+.menu {
+	width: 70%; overflow: hidden; float: left;
+}
+.menu li {
+	font: 600 16px/normal "Nanum Square"; padding: 13px 20px 0px; height: 45px; text-align: center; color: rgb(255, 255, 255); float: left; font-size-adjust: none; font-stretch: normal;
+}
+.menu li.on {
+	background: rgb(1, 45, 99);
+}
+.menu li a:hover {
+	color: rgb(178, 249, 255);
+}
+.search {
+	width: 30%; right: 10px; float: right; position: absolute;
+}
+.search_area {
+	background: rgb(255, 255, 255); height: 29px; overflow: hidden; padding-right: 30px; margin-top: 8px;
+}
+.search_txt {
+	border: 0px currentColor; border-image: none; width: 100%; text-indent: 5px; font-size: 15px; margin-top: 3px; vertical-align: top; float: left; display: inline-block;
+}
+.btn_search {
+	background: url("//cdn1.innorame.com/pub/JBAqBP/a/bravolo/icon.png") no-repeat 0px -33px; width: 30px; height: 29px; right: 0px; float: right; display: block; position: absolute; z-index: 999;
+}
+#container {
+	margin: auto; width: 100%; overflow: hidden;
+}
+.con_top {
+	padding: 0px 15px; height: 30px; overflow: hidden; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.content {
+	padding: 0px 15px; width: 100%; overflow: hidden; float: left; box-sizing: border-box;
+}
+.article_header {
+	overflow: hidden; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+h3 {
+	line-height: 34px; letter-spacing: -2px; font-size: 25px; font-weight: 600; margin-top: 10px;
+}
+h4 {
+	color: rgb(0, 0, 0); line-height: 24px; letter-spacing: -1px; font-size: 16px; font-weight: normal; margin-top: 15px;
+}
+.info {
+	overflow: hidden; margin-top: 10px; margin-bottom: 10px;
+}
+.date {
+	height: 15px; color: rgb(153, 153, 153); line-height: 15px; font-size: 11px; margin-top: 5px; float: left;
+}
+.reply_sum {
+	color: rgb(57, 96, 166); font-size: 12px; font-weight: bold; margin-top: 5px; float: left; display: none;
+}
+.print {
+	float: right; display: none;
+}
+.article_txt {
+	overflow: hidden;
+}
+.article_txt p {
+	line-height: 28px; letter-spacing: -1px; font-size: 16px; margin-top: 5px;
+}
+.article_txt p img {
+	margin: auto; width: 100%; display: block;
+}
+.article_txt .stit {
+	color: rgb(223, 44, 66); font-size: 18px; font-weight: bold;
+}
+.slot_t1 {
+	padding: 15px 0px; overflow: hidden; margin-top: 40px; border-top-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.tit {
+	letter-spacing: -1px; font-size: 17px; font-weight: bold; margin-bottom: 10px;
+}
+.slot_t1 ul {
+	width: 100%; float: left;
+}
+.slot_t1 li {
+	background: url("//cdn1.innorame.com/pub/JBAqBP/a/bravolo/icon.png") no-repeat 0px -98px; text-indent: 10px; padding-right: 10px;
+}
+.slot_t1 li a {
+	line-height: 28px; overflow: hidden; font-size: 15px; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.reply_wrap {
+	padding: 25px 0px 0px; width: 100%; overflow: hidden; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.reply_wrap .re_tit {
+	text-indent: 0px; letter-spacing: -1px; font-size: 17px; font-weight: bold; margin-bottom: 10px;
+}
+.reply_wrap .write {
+	width: 100%; overflow: hidden; font-size: 14px; margin-bottom: 20px;
+}
+.reply_wrap .write p {
+	padding: 5px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 75%; height: 60px; float: left; box-sizing: border-box;
+}
+.reply_wrap .write p textarea {
+	border: 0px currentColor; border-image: none; width: 100%; height: 40px; color: rgb(153, 153, 153); line-height: 16px; -ms-overflow-x: hidden; -ms-overflow-y: auto;
+}
+.reply_wrap .btn_reply {
+	background: rgb(247, 247, 247); border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(221, 221, 221) rgb(221, 221, 221) rgb(221, 221, 221) currentColor; border-image: none; width: 25%; height: 60px; text-align: center; color: rgb(102, 102, 102); line-height: 60px; float: left; display: block; box-sizing: border-box;
+}
+.reply_wrap .list {
+	padding: 10px 0px; overflow: hidden; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid;
+}
+.re_info {
+	color: rgb(0, 0, 0); font-size: 13px; font-weight: bold;
+}
+.re_date {
+	color: rgb(153, 153, 153); padding-left: 5px; font-size: 12px;
+}
+.re_txt {
+	line-height: 20px; letter-spacing: -1px; font-size: 13px; margin-top: 10px; margin-bottom: 10px;
+}
+.re_write {
+	width: 100px; color: rgb(102, 102, 102); line-height: 22px; font-size: 13px; float: left;
+}
+.list dl {
+	float: right;
+}
+.list dt {
+	background: url("//cdn1.innorame.com/pub/JBAqBP/a/bravolo/icon.png") no-repeat -118px 1px; width: 40px; height: 22px; color: rgb(255, 0, 0); line-height: 22px; text-indent: 22px; font-size: 11px; float: left;
+}
+.list dd {
+	background: url("//cdn1.innorame.com/pub/JBAqBP/a/bravolo/icon.png") no-repeat -168px 4px; width: 40px; height: 22px; color: rgb(0, 102, 255); line-height: 22px; text-indent: 22px; font-size: 11px; margin-left: 15px; float: left;
+}
+.side {
+	background: rgb(247, 247, 247); width: 300px; height: 1900px; margin-left: 18px; border-right-color: rgb(221, 221, 221); border-left-color: rgb(221, 221, 221); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; float: right; display: none;
+}
+.slot_bn1 img {
+	width: 100%;
+}
+.slot_bn2 img {
+	padding: 0px 15px; width: 100%; height: 80px; margin-top: 25px; box-sizing: border-box;
+}
+.slot_t2 {
+	background: url("//cdn1.innorame.com/pub/JBAqBP/a/bravolo/tab.jpg") no-repeat 15px 30px; padding: 0px 15px; margin-top: 25px;
+}
+.slot_t2 ul {
+	background: url("//cdn1.innorame.com/pub/JBAqBP/a/bravolo/icon.png") no-repeat 0px -121px; padding-bottom: 10px; margin-top: 45px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.slot_t2 li {
+	text-indent: 17px;
+}
+.slot_t2 li a {
+	line-height: 28px; overflow: hidden; font-size: 14px; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.slot_i2 {
+	padding: 0px 15px; margin-top: 25px;
+}
+.slot_i2 dl {
+	padding: 5px 0px; overflow: hidden;
+}
+.slot_i2 dt {
+	overflow: hidden; float: left;
+}
+.slot_i2 dt img {
+	width: 95px; height: 70px;
+}
+.slot_i2 dd {
+	width: 170px; height: 70px; line-height: 18px; letter-spacing: -1px; overflow: hidden; font-size: 13px; margin-left: 5px; float: left;
+}
+.slot_i2 dd span {
+	overflow: hidden; font-size: 15px; font-weight: bold; margin-top: 5px; margin-bottom: 7px; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.slot_i2 ul {
+	padding-top: 5px; padding-bottom: 10px; margin-top: 5px; border-top-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.slot_i2 li {
+	background: url("//cdn1.innorame.com/pub/JBAqBP/a/bravolo/icon.png") no-repeat 3px -95px; text-indent: 12px; padding-right: 10px;
+}
+.slot_i2 li a {
+	line-height: 28px; overflow: hidden; font-size: 14px; display: block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+#footer {
+	padding: 25px 0px; color: rgb(163, 91, 91); font-size: 13px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none;
+}
+.foot_info {
+	margin: auto; padding: 0px 15px; width: 100%; height: 15px; text-align: center; line-height: 15px; overflow: hidden; box-sizing: border-box;
+}
+.copy {
+	margin: 10px auto auto; width: 100%; text-align: center; font-size: 11px;
+}
+#db_box {
+	background: url("../img/form_bg3.gif") 0px 0px / 100%; margin: auto; width: 100%; overflow: hidden; position: relative; min-height: 726px; max-width: 530px;
+}
+#db_box .box1 {
+	margin: 38% 10% 48%; position: absolute;
+}
+#db_box p {
+	width: 34%; margin-bottom: 10px; float: left; box-sizing: border-box;
+}
+#db_box p span {
+	background: rgb(255, 255, 255); padding: 5px; height: 30px; margin-right: 10px; display: inline-block; box-sizing: border-box;
+}
+#db_box p select {
+	border: 0px currentColor; border-image: none; width: 100%; font-family: "malgun gothic"; font-size: 18px;
+}
+#db_box p input {
+	padding: 2px; border: 0px currentColor; border-image: none; width: 100%; font-family: "malgun gothic"; font-size: 18px;
+}
+.db_txt {
+	color: rgb(255, 255, 255); font-family: "malgun gothic"; font-size: 16px;
+}
+.db_txt2 {
+	text-align: center; color: rgb(255, 255, 255); line-height: 18px; padding-top: 10px; padding-bottom: 10px; font-size: 14px;
+}
+.input11 {
+	padding: 5px;
+}
+.select11 {
+	padding: 4px;
+}
+@media all and (max-width:425px)
+{
+#db_box {
+	background: url("../img/form_bg3.gif") 0px 0px / 100%; min-height: 658px;
+}
+#db_box .box1 {
+	margin: 38% 5% 48%;
+}
+.db_txt2 {
+	padding: 20px 0px; font-size: 14px;
+}
+}
+@media all and (max-width:375px)
+{
+#db_box {
+	min-height: 574px;
+}
+#db_box .box1 {
+	margin: 38% 5% 48%;
+}
+.db_txt2 {
+	padding: 20px 0px; font-size: 12px;
+}
+}
+@media all and (max-width:320px)
+{
+#db_box {
+	min-height: 480px;
+}
+#db_box .box1 {
+	margin: 38% 5% 48%;
+}
+.db_txt2 {
+	padding: 5px 0px; font-size: 10px;
+}
+}

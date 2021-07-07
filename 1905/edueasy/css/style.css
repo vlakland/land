@@ -1,0 +1,183 @@
+body {
+	list-style: none; margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+li {
+	list-style: none; margin: 0px; padding: 0px;
+}
+a {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+img {
+	border: currentColor; border-image: none;
+}
+.btn_link {
+	left: 0px; width: 100%; bottom: 0px; overflow: hidden; position: fixed;
+}
+.btn_link li {
+	width: 50%; float: left;
+}
+.btn_link li img {
+	width: 100%; vertical-align: top;
+}
+#news-container {
+	width: 100%; overflow: hidden; position: relative;
+}
+#news-container ul {
+	left: 0px; width: 100%; font-family: "dotum"; font-size: 15px; position: absolute;
+}
+#news-container ul li {
+	width: 100%; height: 30px; line-height: 30px; overflow: hidden; padding-right: 10px; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.head_txt_style01 {
+	font-family: "malgun gothic"; font-size: 15px;
+}
+.head_txt_style01 li {
+	padding-left: 5px; float: left;
+}
+#news-container-head {
+	padding-bottom: 1px; font-family: "malgun gothic"; font-size: 15px; font-weight: bold;
+}
+#contents {
+	padding: 5px 15px 0px;
+}
+h1 {
+	text-align: justify; color: rgb(0, 0, 0); line-height: 30px; font-family: "malgun gothic"; font-size: 22px; font-weight: bold;
+}
+h1 span {
+	font: inherit; color: rgb(0, 0, 255); font-size-adjust: inherit; font-stretch: inherit;
+}
+h2 {
+	text-align: justify; color: rgb(0, 0, 0); line-height: 28px; font-family: "malgun gothic"; font-size: 17px; font-weight: normal;
+}
+h3 {
+	text-align: justify; color: rgb(0, 0, 0); line-height: 28px; font-family: "malgun gothic"; font-size: 17px; font-weight: bold;
+}
+h3 span {
+	font: inherit; color: rgb(221, 0, 0); font-size-adjust: inherit; font-stretch: inherit;
+}
+#date {
+	padding-bottom: 5px; font-family: "dotum"; font-size: 12px; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.body_txt p { letter-spacing: -1px;
+	text-align: justify; line-height: 28px; padding-top: 15px; font-family: "malgun gothic"; font-size: 16px; -ms-word-break: break-all;
+}
+.body_txt p span {
+	text-align: justify; color: rgb(0, 0, 255); line-height: 28px; padding-top: 15px; font-family: "malgun gothic"; font-size: 16px; font-weight: bold; -ms-word-break: break-all;
+}
+.b_txt a {
+	text-align: justify; color: rgb(0, 0, 153); padding-top: 20px; font-family: "malgun gothic"; font-size: 16px; font-weight: bold; text-decoration: underline; -ms-word-break: break-all;
+}
+.text_box_tit {
+	color: rgb(51, 51, 51); padding-bottom: 5px; font-family: "malgun gothic"; font-weight: bold; border-bottom-color: rgb(0, 102, 204); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.text_box {
+	background: rgb(247, 247, 246); padding: 10px 5px; border: 1px solid rgb(243, 243, 242); border-image: none;
+}
+.text_box td a {
+	text-align: justify; line-height: 24px; font-family: "malgun gothic"; font-size: 14px; -ms-word-break: break-all;
+}
+#footer {
+	padding: 10px 0px; text-align: center; font-family: "malgun gothic"; font-size: 12px; border-top-color: rgb(102, 102, 102); border-top-width: 2px; border-top-style: solid;
+}
+.sub {
+	padding: 5px 0px; text-align: center; color: rgb(255, 255, 255); font-family: "malgun gothic"; font-size: 11px;
+}
+.db_form {
+	padding: 10px 10px 5px; background-color: rgb(255, 255, 255);
+}
+.db_txt1 {
+	padding: 0px 7px 7px; font-family: "malgun gothic"; font-size: 14px; font-weight: bold;
+}
+.db_txt2 {
+	padding: 0px 7px 7px; font-family: "malgun gothic"; font-size: 12px; font-weight: bold;
+}
+.law {
+	padding: 7px 5px 7px 0px; text-align: right; color: rgb(0, 0, 0); font-family: "malgun gothic"; font-size: 12px; font-weight: bold;
+}
+.law a {
+	padding: 7px 5px 7px 0px; text-align: right; color: rgb(0, 0, 0); font-family: "malgun gothic"; font-size: 12px; font-weight: bold;
+}
+.sub_txt {
+	padding: 5px 0px; text-align: center; font-family: "malgun gothic"; font-size: 14px;
+}
+.c_txt {
+	padding: 5px; color: rgb(102, 102, 102); font-family: "malgun gothic"; font-size: 12px;
+}
+#reply {
+	padding-top: 20px;
+}
+.banner_tit {
+	padding: 10px 5px; color: rgb(48, 67, 69); font-family: "malgun gothic"; font-size: 15px; font-weight: bold; border-top-color: rgb(164, 164, 164); border-bottom-color: rgb(164, 164, 164); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(246, 246, 246);
+}
+.banner_tit02 {
+	text-align: right; padding-right: 5px; font-family: "malgun gothic"; font-weight: bold; border-top-color: rgb(164, 164, 164); border-bottom-color: rgb(164, 164, 164); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; background-color: rgb(246, 246, 246);
+}
+.banner_tit02 a {
+	font-weight: bold;
+}
+.banner_box {
+	padding: 10px;
+}
+.banner_txt {
+	line-height: 20px; padding-bottom: 5px; font-size: 15px;
+}
+.banner_txt a {
+	line-height: 20px; padding-bottom: 5px; font-size: 15px;
+}
+.banner_txt02 {
+	text-align: center; line-height: 18px; padding-bottom: 5px; font-size: 14px;
+}
+a {
+	text-align: center; line-height: 18px; padding-bottom: 5px; font-size: 14px;
+}
+.b_list {
+	width: 25%; height: 35px; text-align: center; font-weight: bold; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.b_list0 {
+	width: 25%; height: 35px; text-align: center; color: rgb(13, 13, 78); font-weight: bold; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}
+.b_list0 a {
+	color: rgb(13, 13, 78); text-decoration: none;
+}
+.style03 {
+	color: rgb(192, 1, 1); line-height: 27px; font-family: "malgun gothic"; font-size: 15px; font-weight: bold;
+}
+.form1 {
+	    border: 3px solid #165999; margin: 0px 20px 20px; border-image: none; text-align: center; overflow: hidden;
+}
+.tit {
+	font: bold 24px/28px "malgun Gothic"; margin: 0px 20px; color: rgb(255, 255, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.form1 table {
+	margin-top: 5px;
+}
+.form1 th {
+	width: 60px; text-align: left; padding-left: 10px; font-size: 14px; font-weight: bold;
+}
+.form1 td {
+	height: 28px; text-align: left; padding-left: 0px;
+}
+.form2 {
+	    border: 3px solid #165999; margin: 0px 0px 20px; border-image: none; text-align: center; overflow: hidden;
+}
+.tit {
+	font: bold 24px/28px "malgun Gothic"; margin: 0px 20px; color: rgb(255, 255, 255); letter-spacing: -1px; font-size-adjust: none; font-stretch: normal;
+}
+.form2 table {
+	margin-top: 5px;
+}
+.form2 th {
+	width: 60px; text-align: left; padding-left: 5px; font-size: 14px; font-weight: bold;
+}
+.form2 td {
+	height: 28px; text-align: left; padding-left: 0px;
+}
